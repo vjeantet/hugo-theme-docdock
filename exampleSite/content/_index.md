@@ -35,16 +35,8 @@ The current documentation is automatically published thanks to [Netlify](https:/
 Read more about [Automated deployments with Wercker on gohugo.io](https://gohugo.io/tutorials/automated-deployments/)
 {{% /panel %}}
 
-
-## Contribute to this documentation
-Feel free to update this content, just send a Edit a page and pullrequest it, your modification will be deployed automatically when merged.
-
-Use the "Edit this page" link you will find on top right of each page.
-
-
 ## The Dodock theme
 This theme support a page tree structure to display and organize pages.
-It works like the confluence wiki from atlassian
 
 {{%panel%}}**content organization** : All contents are pages which belong to other pages. [read more about this]({{%relref "organisation.md"%}}) {{%/panel%}}
 
@@ -61,4 +53,9 @@ Here are the main features :
 * [Image resizing, shadow...]({{%relref "shortcode/image.md" %}})
 * Tags
 
-![](https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/tn.png?classes=border,shadow)
+![](https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/tn.png?width=33pc&classes=border,shadow)
+
+## Contribute to this documentation
+Feel free to update this content, just send a Edit a page and pullrequest it, your modification will be deployed automatically when merged.
+
+Use the "Edit this page" link you will find on top right of each page.
