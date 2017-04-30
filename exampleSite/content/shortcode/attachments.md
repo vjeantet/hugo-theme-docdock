@@ -25,19 +25,18 @@ When your page is named "mypage.md", create a folder named mypage**.files** and 
 | Parameter | Default | Description |
 |:--|:--|:--|
 | title | "Attachments" | List's title  |
-| pattern | ".*" | A regular expressions, used to filter the attachments by file name. |
-
-
-
-{{%panel theme="warning" header="**Note about pattern** and regular expression"%}}
-The `pattern` parameter value must be [regular expressions](https://en.wikipedia.org/wiki/Regular_expression). 
+| pattern | ".*" | A regular expressions, used to filter the attachments by file name. <br/><br/>{{%alert warning%}}The **pattern** parameter value must be [regular expressions](https://en.wikipedia.org/wiki/Regular_expression). 
 
 For example:
 
-* To match a file suffix of 'jpg', use `.*jpg` (not *.jpg).
-* To match file names ending in 'jpg' or 'png', use `.*(jpg|png)`
+* To match a file suffix of 'jpg', use **.*jpg** (not *.jpg).
+* To match file names ending in 'jpg' or 'png', use **.*(jpg|png)**
 
-{{%/panel%}}
+{{%/alert%}}|
+
+
+
+
 
 
 ## Demo
