@@ -48,6 +48,7 @@ Here are the main features :
 * [Generate RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
 * [Attachments files]({{%relref "shortcode/attachments.md" %}})
 * [List child pages]({{%relref "shortcode/children.md" %}})
+* [Excerpt]({{%relref "shortcode/excerpt.md"%}}) ! Include segment of content from one page in another
 * Automatic next/prev buttons to navigate through menu entries
 * [Icons]({{%relref "shortcode/icon.md" %}}), [Buttons]({{%relref "shortcode/button.md" %}}), [Alerts]({{%relref "shortcode/alert.md" %}}), [Panels]({{%relref "shortcode/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcode/notice.md" %}})
 * [Image resizing, shadow...]({{%relref "shortcode/image.md" %}})
