@@ -70,8 +70,6 @@ By using a combination of horizontal and vertical slides you can customize the n
 
 For example, a very simple slideshow presentation can be created as follows
 
-[{{%icon expand%}}click here to view this page rendered]({{%relref "myslide.md"%}})
-
 ```
 +++
 draft = false
@@ -124,3 +122,4 @@ ___
 
 ```
 
+[{{%icon expand%}}click here to view this page rendered]({{%relref "myslide.md"%}})
