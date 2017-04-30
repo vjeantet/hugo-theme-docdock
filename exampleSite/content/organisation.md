@@ -76,6 +76,18 @@ Add a `name` param next to `[menu.main]`
 	name = "Github repo"
 	+++
 
+### Create a page redirector
+Add a `url` param next to `[menu.main]`
+
+	+++
+	[menu.main]
+	parent = "page"
+	identifier = "page-images"
+	weight = 23
+	url = "/shortcode/image/"
+	+++
+
+{{%alert info%}}Look at the menu "Create Page/About images" which redirects to "Shortcodes/image{{%/alert%}}
 
 ### Order sibling menu/page entries
 
