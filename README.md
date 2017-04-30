@@ -11,6 +11,7 @@ Visit the [theme documentation](http://docdock.netlify.com/) to see what is goin
 - RevealJS presentation from markdown (embededed or fullscreen page)
 - Attachments files
 - List child pages
+- Include segment of content from one page in another (Excerpt)
 - Automatic next/prev buttons to navigate through menu entries
 - Icons, Buttons, Alerts, Panels, Tip/Note/Info/Warning boxes
 - Image resizing, shadow...
