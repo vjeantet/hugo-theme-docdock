@@ -54,7 +54,7 @@ Here are the main features :
 * [Search]({{%relref "search.md" %}})
 * Handle 5 levels of documentation
 * [Generate RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
-* [Attachments files]({{%relref "shortcode/attachements.md" %}})
+* [Attachments files]({{%relref "shortcode/attachments.md" %}})
 * [List child pages]({{%relref "shortcode/children.md" %}})
 * Automatic next/prev buttons to navigate through menu entries
 * [Icons]({{%relref "shortcode/icon.md" %}}), [Buttons]({{%relref "shortcode/button.md" %}}), [Alerts]({{%relref "shortcode/alert.md" %}}), [Panels]({{%relref "shortcode/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcode/notice.md" %}})
