@@ -51,13 +51,14 @@ It works like the confluence wiki from atlassian
 ## Features
 Here are the main features :
 
+* [Search]({{%relref "search.md" %}})
 * Handle 5 levels of documentation
-* Search using **lunr** index
 * [Generate RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
-* [Icons]({{%relref "shortcode/icon.md" %}}), [Buttons]({{%relref "shortcode/button.md" %}}), [Alerts]({{%relref "shortcode/alert.md" %}}), [Panels]({{%relref "shortcode/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcode/notice.md" %}})
-* Add shadow or border on images
+* [Attachments files]({{%relref "shortcode/attachements.md" %}})
 * [List child pages]({{%relref "shortcode/children.md" %}})
+* Automatic next/prev buttons to navigate through menu entries
+* [Icons]({{%relref "shortcode/icon.md" %}}), [Buttons]({{%relref "shortcode/button.md" %}}), [Alerts]({{%relref "shortcode/alert.md" %}}), [Panels]({{%relref "shortcode/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcode/notice.md" %}})
+* [Image resizing, shadow...]({{%relref "shortcode/image.md" %}})
 * Tags
-
 
 ![](https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/tn.png?classes=border,shadow)

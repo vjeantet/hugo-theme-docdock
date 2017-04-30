@@ -4,6 +4,18 @@ This repository contains a theme for [Hugo](https://gohugo.io/), based on great 
 
 Visit the [theme documentation](http://docdock.netlify.com/) to see what is going on. It is actually built with this theme.
 
+# Main functionalities
+
+- Search
+- Handle 5 levels of menu
+- RevealJS presentation from markdown (embededed or fullscreen page)
+- Attachments files
+- List child pages
+- Automatic next/prev buttons to navigate through menu entries
+- Icons, Buttons, Alerts, Panels, Tip/Note/Info/Warning boxes
+- Image resizing, shadow...
+- Tags
+
 ## Installation
 Navigate to your themes folder in your Hugo site and use the following commands:
 ```
@@ -18,12 +30,3 @@ Check that your Hugo version is minimum `0.20` with `hugo version`.
 ## Usage
 
 - [Visit the documentation](http://docdock.netlify.com/)
-
-# Main functionalities
-
-- Search using `lunr` index
-- Handle 5 levels of menu
-- Generate RevealJS presentation from markdown (embededed or fullscreen page)
-- Icons, Buttons, Alerts, Panels, Tip/Note/Info/Warning boxes
-- Add shadow or border on images
-
