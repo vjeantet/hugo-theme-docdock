@@ -15,11 +15,10 @@ lastmodifieremail = "valere.jeantet@gmail.com"
 <span id="sidebar-toggle-span">
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i></a>
 </span>
+<span style="float:right">
+<a class="github-link" href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/_index.md" target="blank"><i class="fa fa-code-fork"></i> Edit this page</a>
+</span>
 
-<div id="top-github-link">
-  <a class="github-link" href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/_index.md" target="blank">
-    <i class="fa fa-code-fork"></i> Edit this page</a>
-</div>
 
 # Hugo docDock theme documentation
 [Hugo-theme-docdock {{%icon fa-github%}}](https://github.com/vjeantet/hugo-theme-docdock) is a theme for Hugo, a fast and modern static website engine written in Go. Where Hugo is often used for blogs, this theme is fully designed for documentation.
