@@ -15,9 +15,6 @@ lastmodifieremail = "valere.jeantet@gmail.com"
 <span id="sidebar-toggle-span">
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i></a>
 </span>
-<span style="float:right">
-<a class="github-link" href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/_index.md" target="blank"><i class="fa fa-code-fork"></i> Edit this page</a>
-</span>
 
 
 # Hugo docDock theme documentation
