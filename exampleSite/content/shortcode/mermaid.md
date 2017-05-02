@@ -53,7 +53,7 @@ gantt
 	sequenceDiagram
 	    participant Alice
 	    participant Bob
-	    Alice->John: Hello John, how are you?
+	    Alice->>John: Hello John, how are you?
 	    loop Healthcheck
 	        John->John: Fight against hypochondria
 	    end
@@ -68,7 +68,7 @@ gantt
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->John: Hello John, how are you?
+    Alice->>John: Hello John, how are you?
     loop Healthcheck
         John->John: Fight against hypochondria
     end
@@ -81,7 +81,7 @@ sequenceDiagram
 ## Flowchart example
 
 	{{</*mermaid*/>}}
-	graph TD;
+	graph LR;
 	    A-->B;
 	    A-->C;
 	    B-->D;
@@ -89,7 +89,7 @@ sequenceDiagram
     {{</* /mermaid */>}}
 
 {{<mermaid>}}
-graph TD;
+graph LR;
     A-->B;
     A-->C;
     B-->D;
