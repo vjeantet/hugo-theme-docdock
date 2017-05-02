@@ -16,7 +16,7 @@ With **Hugo**, pages are the core of your site. Organize your site like any othe
 # Menu
 Hugo has a simple yet powerful [menu system](https://gohugo.io/extras/menus/) that permits content to be placed in menus with a good degree of control without a lot of work, in content pages.
 
-**Each content page composes the menu**, they shape the structure of your website.
+With docdock, **Each content page composes the menu**, they shape the structure of your website.
 
 To link pages to each other : 
 
