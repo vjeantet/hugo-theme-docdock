@@ -7,6 +7,56 @@ description = ""
 parent = "shortcodes"
 identifier = "mermaid"
 +++
+## Flowchart example
+
+	{{</*mermaid*/>}}
+	graph LR;
+		A[Hard edge] -->|Link text| B(Round edge)
+    	B --> C{Decision}
+    	C -->|One| D[Result one]
+    	C -->|Two| E[Result two]
+    {{</* /mermaid */>}}
+
+{{<mermaid>}}
+graph LR;
+	A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+{{< /mermaid >}}
+
+## Sequence example
+
+	{{</*mermaid*/>}}
+	sequenceDiagram
+	    participant Alice
+	    participant Bob
+	    Alice->>John: Hello John, how are you?
+	    loop Healthcheck
+	        John->John: Fight against hypochondria
+	    end
+	    Note right of John: Rational thoughts <br/>prevail...
+	    John-->Alice: Great!
+	    John->Bob: How about you?
+	    Bob-->John: Jolly good!
+	{{</* /mermaid */>}}
+
+
+{{<mermaid>}}
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+{{< /mermaid >}}
+
+
 
 ## GANTT Example
 
@@ -47,51 +97,5 @@ gantt
         Add to mermaid                      :1d
 {{</mermaid>}}
 
-## Sequence example
-
-	{{</*mermaid*/>}}
-	sequenceDiagram
-	    participant Alice
-	    participant Bob
-	    Alice->>John: Hello John, how are you?
-	    loop Healthcheck
-	        John->John: Fight against hypochondria
-	    end
-	    Note right of John: Rational thoughts <br/>prevail...
-	    John-->Alice: Great!
-	    John->Bob: How about you?
-	    Bob-->John: Jolly good!
-	{{</* /mermaid */>}}
 
 
-{{<mermaid>}}
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail...
-    John-->Alice: Great!
-    John->Bob: How about you?
-    Bob-->John: Jolly good!
-{{< /mermaid >}}
-
-## Flowchart example
-
-	{{</*mermaid*/>}}
-	graph LR;
-	    A-->B;
-	    A-->C;
-	    B-->D;
-	    C-->D;
-    {{</* /mermaid */>}}
-
-{{<mermaid>}}
-graph LR;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-{{< /mermaid >}}
