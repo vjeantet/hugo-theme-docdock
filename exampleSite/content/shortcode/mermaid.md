@@ -7,9 +7,10 @@ description = ""
 parent = "shortcodes"
 identifier = "mermaid"
 +++
+
 ## Flowchart example
 
-	{{</*mermaid*/>}}
+	{{</*mermaid align="left"*/>}}
 	graph LR;
 		A[Hard edge] -->|Link text| B(Round edge)
     	B --> C{Decision}
@@ -17,7 +18,7 @@ identifier = "mermaid"
     	C -->|Two| E[Result two]
     {{</* /mermaid */>}}
 
-{{<mermaid>}}
+{{<mermaid align="left">}}
 graph LR;
 	A[Hard edge] -->|Link text| B(Round edge)
     B --> C{Decision}
