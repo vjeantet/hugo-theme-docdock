@@ -46,6 +46,7 @@ Here are the main features :
 * [List child pages]({{%relref "shortcode/children.md" %}})
 * [Excerpt]({{%relref "shortcode/excerpt.md"%}}) ! Include segment of content from one page in another
 * Automatic next/prev buttons to navigate through menu entries
+* [Mermaid diagram]({{%relref "shortcode/mermaid.md" %}}) (flowchart, sequence, gantt)
 * [Icons]({{%relref "shortcode/icon.md" %}}), [Buttons]({{%relref "shortcode/button.md" %}}), [Alerts]({{%relref "shortcode/alert.md" %}}), [Panels]({{%relref "shortcode/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcode/notice.md" %}})
 * [Image resizing, shadow...]({{%relref "shortcode/image.md" %}})
 * Tags
