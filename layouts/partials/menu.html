@@ -1,3 +1,4 @@
+
 <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -6,121 +7,33 @@
     {{if not .Site.Params.noSearch}}
         {{ partial "search.html" . }}
     {{end}}
-</div>
+  </div>
 
   <div class="highlightable">
     <ul class="topics">
-    {{if not .Site.Params.noHomeIcon}}
-        <li data-nav-id="{{"/" | relURL}}" class="dd-item">
-        <a href="{{"/" | relURL}}"><i class="fa fa-fw fa-home"></i></a>
-        </li>
-    {{end}}
-
-{{ $currentNode := . }}
-{{ $.Scratch.Set "ParentMenu" .Site.Menus.main }}
-{{ range .Site.Menus.main }}
-    <li data-nav-id="{{ .URL }}" class="dd-item 
-    {{if ($currentNode.IsMenuCurrent "main" .) }}active{{end}} 
-    {{if ($currentNode.HasMenuCurrent "main" .) }}parent{{end}}">
-    
-    <a href="{{.URL}}">{{.Pre}}{{.Name}}{{.Post}}</a>
-        
-        {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
-        {{ $.Scratch.Set "CurrentMenu" . }}
-        {{ $.Scratch.Add "Breadcrumbs" (print " / <a href='" .URL  "'>" .Name "</a>" )  }}
-        {{ if .HasChildren }}
-            <ul class="n1">
-            {{ $.Scratch.Set "ParentMenuTmp" .Children }}
-            {{ range .Children }}
-            {{ if ne .Identifier ""}}
-                <li data-nav-id="{{ .URL }}" class="dd-item {
-                    {{if ($currentNode.IsMenuCurrent "main" .) }}active{{end}} 
-                    {{if ($currentNode.HasMenuCurrent "main" .) }}parent{{end}}">
-                <a href="{{.URL}}">{{.Pre}}{{.Name}}{{.Post}}</a>
-                
-                {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
-                {{ $.Scratch.Set "CurrentMenu" . }}
-                {{ $.Scratch.Set "ParentMenu" ($.Scratch.Get "ParentMenuTmp") }}
-                {{ $.Scratch.Add "Breadcrumbs" (print " / <a href='" .URL  "'>" .Name "</a>" )  }}
-                {{ if .HasChildren }}
-                <ul class="n2">
-                {{ $.Scratch.Set "ParentMenuTmp" .Children }}
-                {{ range .Children }}
-                {{ if ne .Identifier ""}}
-                <li data-nav-id="{{ .URL }}" class="dd-item 
-                    {{if ($currentNode.IsMenuCurrent "main" .) }}active{{end}} 
-                    {{if ($currentNode.HasMenuCurrent "main" .) }}parent{{end}}">
-                    <a href="{{.URL}}">{{.Pre}}{{.Name}}{{.Post}}</a>
-                
-
-                    {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
-                    {{ $.Scratch.Set "CurrentMenu" . }}
-                    {{ $.Scratch.Set "ParentMenu" ($.Scratch.Get "ParentMenuTmp") }}
-                    {{ $.Scratch.Add "Breadcrumbs" (print " / <a href='" .URL  "'>" .Name "</a>" )  }}
-                    {{ if .HasChildren }}
-                    <ul class="n3">
-                    {{ $.Scratch.Set "ParentMenuTmp" .Children }}
-                    {{ range .Children }}
-                        {{ if ne .Identifier ""}}
-                        <li data-nav-id="{{ .URL }}" class="dd-item 
-                            {{if ($currentNode.IsMenuCurrent "main" .) }}active{{end}} 
-                            {{if ($currentNode.HasMenuCurrent "main" .) }}parent{{end}}">
-                            <a href="{{.URL}}">{{.Pre}}{{.Name}}{{.Post}}</a>
-                        
-
-                            {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
-                            {{ $.Scratch.Set "CurrentMenu" . }}
-                            {{ $.Scratch.Set "ParentMenu" ($.Scratch.Get "ParentMenuTmp") }}
-                            {{ $.Scratch.Add "Breadcrumbs" (print " / <a href='" .URL  "'>" .Name "</a>" )  }}
-                            {{ if .HasChildren }}
-                            <ul class="n4">
-                            {{ $.Scratch.Set "ParentMenuTmp" .Children }}
-                            {{ range .Children }}
-                                {{ if ne .Identifier ""}}
-                                <li data-nav-id="{{ .URL }}" class="dd-item 
-                                    {{if ($currentNode.IsMenuCurrent "main" .) }}active{{end}} 
-                                    {{if ($currentNode.HasMenuCurrent "main" .) }}parent{{end}}">
-                                    <a href="{{.URL}}">{{.Pre}}{{.Name}}{{.Post}}</a>
-                                </li>
-                                {{ end }}
-                            {{ end }}
-                            </ul>
-                            {{ end }}
-                            {{ end }}
-                        </li>
-                        {{ end }}
-                    {{ end }}
-                    </ul>
-                    {{ end }}
-                    {{ end }}
-                </li>
-                {{ end }}
-                {{ end }}
-                </ul>
-                {{ end }}
-                {{ end }}
+        {{if not .Site.Params.noHomeIcon}}
+            <li data-nav-id="{{"/" | relURL}}" class="dd-item">
+            <a href="{{"/" | relURL}}"><i class="fa fa-fw fa-home"></i></a>
             </li>
-            {{ end }}
-            {{ end }}
-            </ul>
-        {{ end }}
-        {{ end }}
-    </li>
-{{end}}
+        {{end}}
 
+        {{ $currentNode := . }}
+        {{ $.Scratch.Set "ParentMenuTmp" .Site.Menus.main }}
+        {{ range .Site.Menus.main }}
+            {{ template "menu-item" dict "menu" . "currentnode" $currentNode }}
+        {{end}}
 
-{{with .Site.Menus.shortcuts}}
-<section id="shortcuts">
-    {{ range sort . "Weight" "asc"}}
-        <li class="" role="">
-            {{.Pre}}
-            <a href="{{.URL}}">{{safeHTML .Name}}</a>
-            {{.Post}}
-        </li>
-    {{end}}
-</section>
-{{end}}
-
+        {{with .Site.Menus.shortcuts}}
+        <section id="shortcuts">
+            {{ range sort . "Weight" "asc"}}
+                <li class="" role="">
+                    {{.Pre}}
+                    <a href="{{.URL}}">{{safeHTML .Name}}</a>
+                    {{.Post}}
+                </li>
+            {{end}}
+        </section>
+        {{end}}
     </ul>
     
      {{ if .Site.Params.showVisitedLinks}}
@@ -131,3 +44,26 @@
     </section>
   </div>
 </nav>
+
+{{ define "menu-item" }}
+    {{$currentNode := (.currentnode)}}
+    <li data-nav-id="{{ .menu.URL }}" class="dd-item 
+    {{if ($currentNode.IsMenuCurrent "main" .menu) }}active{{end}} 
+    {{if ($currentNode.HasMenuCurrent "main" .menu) }}parent{{end}}">
+        <a href="{{.menu.URL}}">{{.menu.Pre}}{{.menu.Name}}{{.menu.Post}}</a>
+        {{ if or ($currentNode.IsMenuCurrent "main" .menu) ($currentNode.HasMenuCurrent "main" .menu) }}
+            {{ $currentNode.Scratch.Set "ParentMenu" ($currentNode.Scratch.Get "ParentMenuTmp") }}
+            {{ $currentNode.Scratch.Add "Breadcrumbs" (print " / <a href='" .menu.URL  "'>" .menu.Name "</a>" )  }}
+            {{ if .menu.HasChildren }}
+                <ul>
+                {{ $currentNode.Scratch.Set "ParentMenuTmp" .menu.Children }}
+                {{ range .menu.Children }}
+                    {{ if ne .Identifier ""}}
+                        {{ template "menu-item" dict "menu" . "currentnode" $currentNode }}
+                    {{ end }}
+                {{ end }}
+                </ul>
+             {{ end }}
+        {{ end }}
+    </li>
+{{ end }}

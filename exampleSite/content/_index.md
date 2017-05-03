@@ -40,7 +40,7 @@ This theme support a page tree structure to display and organize pages.
 Here are the main features :
 
 * [Search]({{%relref "search.md" %}})
-* Handle 5 levels of documentation
+* **Unlimited menu levels**
 * [Generate RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
 * [Attachments files]({{%relref "shortcode/attachments.md" %}})
 * [List child pages]({{%relref "shortcode/children.md" %}})

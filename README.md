@@ -7,7 +7,7 @@ Visit the [theme documentation](http://docdock.netlify.com/) to see what is goin
 # Main functionalities
 
 - Search
-- Handle 5 levels of menu
+- **Unlimited menu levels**
 - RevealJS presentation from markdown (embededed or fullscreen page)
 - Attachments files
 - List child pages
