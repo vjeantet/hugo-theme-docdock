@@ -8,7 +8,7 @@ description = "Documentation theme for Hugo, based on Matcornic Learn theme"
 homepage = "https://github.com/vjeantet/hugo-theme-docdock"
 repo = "https://github.com/vjeantet/hugo-theme-docdock"
 tags = ["documentation", "menu","slide","search"]
-features = ["documentation","menu","search","slide"]
+features = ["documentation","menu","search","slide", "attachments"]
 min_version = 0.20
 
 [author]
