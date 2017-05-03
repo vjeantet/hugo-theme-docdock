@@ -4,7 +4,7 @@ This repository contains a theme for [Hugo](https://gohugo.io/), based on great 
 
 Visit the [theme documentation](http://docdock.netlify.com/) to see what is going on. It is actually built with this theme.
 
-# Main functionalities
+# Main features
 
 - Search
 - **Unlimited menu levels**
