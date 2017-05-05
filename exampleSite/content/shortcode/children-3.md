@@ -1,6 +1,6 @@
 +++
 draft = false
-title = "Zpage 3"
+title = "page 3"
 description = "This is a demo child page"
 
 [menu.main]
