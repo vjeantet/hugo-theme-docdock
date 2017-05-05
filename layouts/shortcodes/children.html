@@ -3,16 +3,17 @@
 {{ $style :=  .Get "style" | default "li" }}
 {{ $depth :=  .Get "depth" | default 1 }}
 {{ $withDescription :=  .Get "description" | default false }}
+{{ $sortTerm :=  .Get "sort" | default "Weight" }}
 
 <ul class="children children-{{$style}}">
-	{{template "childs" dict "menu" (index .Page.Menus "main") "style" $style "nohidden" $nohidden "count" 1 "depth" $depth "pages" .Site.Pages "description" $withDescription }}	
+	{{template "childs" dict "menu" (index .Page.Menus "main") "style" $style "nohidden" $nohidden "count" 1 "depth" $depth "pages" .Site.Pages "description" $withDescription "sortTerm" $sortTerm}}	
 </ul>
 
 {{ end }}
 {{.Inner|safeHTML}}
 
 {{ define "childs" }}
-	{{ range .menu.Children }}
+	{{ range sort .menu.Children .sortTerm }}
 		{{ if or (not $.nohidden ) (and (ne $.nohidden nil) (.Identifier))   }} 
 
 
@@ -35,7 +36,7 @@
 		{{ if lt $.count $.depth}}
 			{{ if  (.HasChildren)}}
 <ul>
-	{{template "childs" dict "menu" . "style" $.style "nohidden" $.nohidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description}}
+	{{template "childs" dict "menu" . "style" $.style "nohidden" $.nohidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "	sortTerm" $.sortTerm}}
 </ul>
 			{{end}}
 		{{end}}
