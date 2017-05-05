@@ -1,18 +1,26 @@
 {{ if (index .Page.Menus "main") }}
-{{ $style := .Get "style"}}
 {{ $nohidden := .Get "nohidden"}}
-{{ if $style}}
-	<div class="children">
-		{{ range (index .Page.Menus "main").Children }}
-			{{ if or (not $nohidden ) (and (ne $nohidden nil) (.Identifier))   }} 
-				{{(printf "<%s>" $style)|safeHTML}}<a href="{{.URL}}" >{{ .Name }}</a>{{(printf "</%s>" $style)|safeHTML}}
-			{{ end }}
-		{{end}}
-	</div>
-{{else}}
-		{{ range (index .Page.Menus "main").Children }}
-			<li><a href="{{.URL}}" >{{ .Name }}</a></li>
-		{{ end }}
-{{end}}
+{{ $style :=  .Get "style" | default "li" }}
+{{ $depth :=  .Get "depth" | default 1 }}
+
+<ul class="children">
+	{{template "childs" dict "menu" (index .Page.Menus "main") "style" $style "nohidden" $nohidden "count" 1 "depth" $depth}}	
+</ul>
+
 {{ end }}
 {{.Inner|safeHTML}}
+
+{{ define "childs" }}
+	{{ range .menu.Children }}
+		{{ if or (not $.nohidden ) (and (ne $.nohidden nil) (.Identifier))   }} 
+{{(printf "<%s>" $.style)|safeHTML}}<a href="{{.URL}}" >{{ .Name }}</a>{{(printf "</%s>" $.style)|safeHTML}}
+		{{ end }}
+		{{ if lt $.count $.depth}}
+			{{ if  (.HasChildren)}}
+<ul>
+	{{template "childs" dict "menu" . "style" $.style "nohidden" $.nohidden "count" (add $.count 1) "depth" $.depth}}
+</ul>
+			{{end}}
+		{{end}}
+	{{end}}
+{{end}}
