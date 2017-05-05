@@ -29,9 +29,9 @@ This shortcode will list the child pages of a page.
 
 {{% children nohidden="true" %}}
 
-	{{%/* children style="div" depth="3" */%}}
+	{{%/* children style="h3" depth="3" */%}}
 
-{{% children style="div" depth="3" %}}
+{{% children style="h3" depth="3" %}}
 
 	{{%/* children style="div" depth="999" */%}}
 
