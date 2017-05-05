@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "excerpt"
-description = ""
+description = "The Excerpt shortcode is used to mark a part of a page's content for re-use."
 
 [menu.main]
 parent = "shortcodes"

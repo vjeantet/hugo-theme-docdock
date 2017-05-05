@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "icon"
-description = ""
+description = "Display an icon."
 
 [menu.main]
 parent = "shortcodes"

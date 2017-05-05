@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "children"
-description = ""
+description = "List the child pages of a page"
 
 [menu.main]
 parent = "shortcodes"

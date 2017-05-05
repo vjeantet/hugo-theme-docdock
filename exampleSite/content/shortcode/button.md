@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "button"
-description = "s"
+description = "Display an actionable button in your page."
 
 [menu.main]
 parent = "shortcodes"

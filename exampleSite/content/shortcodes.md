@@ -18,4 +18,4 @@ weight = 30
 
 A bunch of Shortcodes are available with this theme :
 
-{{%children style="h2"%}}
+{{%children style="h2" description="true"%}}

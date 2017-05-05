@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "notice"
-description = ""
+description = "Disclaimers to help you structure your page"
 
 [menu.main]
 parent = "shortcodes"

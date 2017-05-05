@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "alert"
-description = ""
+description = "The alert shortcode allows you to highlight information in your page."
 [menu.main]
 parent = "shortcodes"
 identifier = "alert"

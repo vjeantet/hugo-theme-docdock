@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "panel"
-description = ""
+description = "Allow you to highlight information or put it in a box."
 
 [menu.main]
 parent = "shortcodes"
