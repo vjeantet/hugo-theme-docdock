@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "page 1-1"
-description = "This is a demo child page"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
 
 [menu.main]
 parent = "children-1"

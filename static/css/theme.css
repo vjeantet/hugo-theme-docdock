@@ -1038,3 +1038,32 @@ pre .copy-to-clipboard:hover {
 }
 
 /*# sourceMappingURL=theme.css.map */
+
+/* Children shortcode */
+.children p {
+    font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom:  0px;
+    padding-bottom: 0px;
+}
+.children-li li {
+        
+}
+.children-li p {
+    font-size: small;
+    font-style: italic;
+
+}
+.children-h3 p {
+    font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom:  0px;
+    padding-bottom: 0px;
+}
+.children-h3 h3 {
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
