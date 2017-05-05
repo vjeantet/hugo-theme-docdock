@@ -28,7 +28,7 @@ This current documentation has been statically generated with Hugo with a simple
 
 {{% panel theme="success" header="Automated deployments" footer="Netlify builds, deploys, and hosts  frontends." %}}
 The current documentation is automatically published thanks to [Netlify](https://www.netlify.com/).
-Read more about [Automated deployments with Wercker on gohugo.io](https://gohugo.io/tutorials/automated-deployments/)
+Read more about [Automated deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
 {{% /panel %}}
 
 ## The Dodock theme
