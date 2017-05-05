@@ -3,7 +3,7 @@
 {{ $style :=  .Get "style" | default "li" }}
 {{ $depth :=  .Get "depth" | default 1 }}
 {{ $withDescription :=  .Get "description" | default false }}
-{{ $sortTerm :=  .Get "sort" | default "Weight" }}
+{{ $sortTerm :=  .Get "sort" | default "" }}
 
 <ul class="children children-{{$style}}">
 	{{template "childs" dict "menu" (index .Page.Menus "main") "style" $style "nohidden" $nohidden "count" 1 "depth" $depth "pages" .Site.Pages "description" $withDescription "sortTerm" $sortTerm}}	
