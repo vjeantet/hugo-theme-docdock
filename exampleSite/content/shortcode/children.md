@@ -25,11 +25,15 @@ Use the children shortcode to list the child pages of a page and the further des
 
 ## Demo
 
-	{{%/* children */%}}
+	{{%/* children  */%}}
+
+{{%children %}}
+
+	{{%/* children description="true"   */%}}
 
 {{%children description="true"   %}}
 
-	{{%/* children */%}}
+	{{%/* children nohidden="true" */%}}
 
 {{% children nohidden="true" %}}
 
