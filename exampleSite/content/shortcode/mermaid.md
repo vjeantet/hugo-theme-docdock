@@ -9,7 +9,7 @@ identifier = "mermaid"
 +++
 
 ## Flowchart example
-
+{{%expand "Show code ..."%}}
 	{{</*mermaid align="left"*/>}}
 	graph LR;
 		A[Hard edge] -->|Link text| B(Round edge)
@@ -17,6 +17,7 @@ identifier = "mermaid"
     	C -->|One| D[Result one]
     	C -->|Two| E[Result two]
     {{</* /mermaid */>}}
+{{%/expand%}}
 
 {{<mermaid align="left">}}
 graph LR;
@@ -27,7 +28,7 @@ graph LR;
 {{< /mermaid >}}
 
 ## Sequence example
-
+{{%expand "Show code ..."%}}
 	{{</*mermaid*/>}}
 	sequenceDiagram
 	    participant Alice
@@ -41,7 +42,7 @@ graph LR;
 	    John->Bob: How about you?
 	    Bob-->John: Jolly good!
 	{{</* /mermaid */>}}
-
+{{%/expand%}}
 
 {{<mermaid>}}
 sequenceDiagram
@@ -60,7 +61,7 @@ sequenceDiagram
 
 
 ## GANTT Example
-
+{{%expand "Show code ..."%}}
 	{{</*mermaid*/>}}
 	gantt
 	        dateFormat  YYYY-MM-DD
@@ -78,7 +79,7 @@ sequenceDiagram
 	        Create tests for renderer           :2d
 	        Add to mermaid                      :1d
 	{{</* /mermaid */>}}
-
+{{%/expand%}}
 
 {{<mermaid>}}
 gantt

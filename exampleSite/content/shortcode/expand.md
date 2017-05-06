@@ -23,9 +23,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{{%/expa
 
 this shortcode takes exactly one optional parameter to define the text that appears next to the expand/collapse icon. (default is "Expand me...")
 
-	{{%/*expand "Show answer" */%}}Yes !.{{%/* /expand*/%}}
+	{{%/*expand "Is this docdock theme rocks ?" */%}}Yes !.{{%/* /expand*/%}}
 
-{{%expand "Show answer" %}}Yes !{{% /expand%}}
+{{%expand "Is this docdock theme rocks ?" %}}Yes !{{% /expand%}}
 
 # Demo
 
