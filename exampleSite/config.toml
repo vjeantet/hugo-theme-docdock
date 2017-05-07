@@ -26,3 +26,8 @@ name = "<i class='fa fa-bookmark'></i> Hugo Documentation"
 identifier = "hugodoc"
 url = "https://gohugo.io/"
 weight = 2
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 3
