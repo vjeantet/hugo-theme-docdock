@@ -24,8 +24,7 @@ padding-left: 4px ;
   {{ range getJSON $url }}
   <div>
     <img src="{{.avatar_url}}" class="inline" width="32" height="32" style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; ">
-    <label>@<a href="{{.html_url}}">
-    {{.login}}</a></label>
+    <label><a href="{{.html_url}}">@{{.login}}</a></label>
     <span class="contributions">{{.contributions}} commits</span>
   </div>
   {{ end }}
