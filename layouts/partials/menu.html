@@ -56,27 +56,26 @@
 {{ define "menu-item" }}
     {{$currentNode := .currentnode }}
     {{$showvisitedlinks := .showvisitedlinks }}
-
-    <li data-nav-id="{{ .menu.URL }}" class="dd-item 
-    {{if ($currentNode.IsMenuCurrent "main" .menu) }}active{{end}} 
-    {{if ($currentNode.HasMenuCurrent "main" .menu) }}parent{{end}}">
-        <a href="{{.menu.URL}}">
-            {{.menu.Pre}}{{.menu.Name}}{{.menu.Post}}
-            {{ if $showvisitedlinks}}<i style="color:grey" class="fa fa-check read-icon"></i>{{end}}
-        </a>
-        {{ if or ($currentNode.IsMenuCurrent "main" .menu) ($currentNode.HasMenuCurrent "main" .menu) }}
-            {{ $currentNode.Scratch.Set "ParentMenu" ($currentNode.Scratch.Get "ParentMenuTmp") }}
-            {{ $currentNode.Scratch.Add "Breadcrumbs" (print " / <a href='" .menu.URL  "'>" .menu.Name "</a>" )  }}
-            {{ if .menu.HasChildren }}
-                <ul>
-                {{ $currentNode.Scratch.Set "ParentMenuTmp" .menu.Children }}
-                {{ range .menu.Children }}
-                    {{ if ne .Identifier ""}}
+    {{ if ne .menu.Identifier ""}}
+        <li data-nav-id="{{ .menu.URL }}" class="dd-item 
+        {{if ($currentNode.IsMenuCurrent "main" .menu) }}active{{end}} 
+        {{if ($currentNode.HasMenuCurrent "main" .menu) }}parent{{end}}">
+            <a href="{{.menu.URL}}">
+                {{.menu.Pre}}{{.menu.Name}}{{.menu.Post}}
+                {{ if $showvisitedlinks}}<i style="color:grey" class="fa fa-check read-icon"></i>{{end}}
+            </a>
+            {{ if or ($currentNode.IsMenuCurrent "main" .menu) ($currentNode.HasMenuCurrent "main" .menu) }}
+                {{ $currentNode.Scratch.Set "ParentMenu" ($currentNode.Scratch.Get "ParentMenuTmp") }}
+                {{ $currentNode.Scratch.Add "Breadcrumbs" (print " / <a href='" .menu.URL  "'>" .menu.Name "</a>" )  }}
+                {{ if .menu.HasChildren }}
+                    <ul>
+                    {{ $currentNode.Scratch.Set "ParentMenuTmp" .menu.Children }}
+                    {{ range .menu.Children }}
                         {{ template "menu-item" dict "menu" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
                     {{ end }}
-                {{ end }}
-                </ul>
-             {{ end }}
-        {{ end }}
-    </li>
+                    </ul>
+                 {{ end }}
+            {{ end }}
+        </li>
+    {{ end }}
 {{ end }}
