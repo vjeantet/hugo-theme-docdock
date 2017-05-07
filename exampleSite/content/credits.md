@@ -4,7 +4,7 @@ description = "contributors and packages used by hugo-theme-docdock"
 
 [menu.main]
 parent = ""
-identifier = "credits"	
+identifier = ""	
 weight = 20
 
 +++
