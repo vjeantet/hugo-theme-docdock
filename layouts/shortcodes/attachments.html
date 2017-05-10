@@ -6,16 +6,18 @@
 		{{if ($.Get "pattern")}}
 			{{if (findRE ($.Get "pattern") .Name)}}
 				<li>
-				<a 
-				href="{{ printf "%s/%s%s.files/%s" $.Site.BaseURL $.Page.File.Dir $.Page.File.BaseFileName .Name }}" 
-				title="Dernière modification le {{(time .ModTime).Format "02/01/2006 à 15h04" }}" >{{.Name}}</a> ({{div .Size 1024 }} ko)
+					<a href="{{ printf "%s/%s%s.files/%s" $.Site.BaseURL $.Page.File.Dir $.Page.File.BaseFileName .Name }}" >
+						{{.Name}}
+					</a>
+					({{div .Size 1024 }} ko)
 				</li>
 			{{end}}
 		{{else}}
 			<li>
-				<a 
-				href="{{ printf "%s/%s%s.files/%s" $.Site.BaseURL $.Page.File.Dir $.Page.File.BaseFileName .Name }}" 
-				title="Dernière modification le {{(time .ModTime).Format "02/01/2006 à 15h04" }}" >{{.Name}}</a> ({{div .Size 1024 }} ko)
+				<a href="{{ printf "%s/%s%s.files/%s" $.Site.BaseURL $.Page.File.Dir $.Page.File.BaseFileName .Name }}" >
+					{{.Name}}
+				</a>
+				({{div .Size 1024 }} ko)
 			</li>
 		{{end}}
 	{{end}}
