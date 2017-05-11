@@ -7,34 +7,38 @@
     
 
     <div id="navigation">
-        <!-- Sibbling contents -->
+        <!-- Next prev page -->
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}
+            {{ template "menu-nextprev" dict "menu" . "currentnode" $currentNode }}
+        {{end}}  
 
-        {{ $parentMenu :=  ($.Scratch.Get "ParentMenu") }}  
-        {{if  $parentMenu}}
-            {{ $curentURL :=  .RelPermalink }}  
-            {{ range $parentMenu }}
-                {{ if ne .URL $curentURL}}
-                    {{ if ne .Identifier ""}}
-                        {{ $.Scratch.Set "TmpMenu" . }}
-                        {{if eq ($.Scratch.Get "NextOK") "OK"}}
-                            {{if not ($.Scratch.Get "NextMenu")}}
-                                {{ $.Scratch.Set "NextMenu" . }}
-                            {{end}}
-                        {{end}}
-                    {{ end }}
-                {{ else }}
-                    {{ $.Scratch.Set "PrevMenu" ($.Scratch.Get "TmpMenu") }}
-                    {{ $.Scratch.Set "NextOK" "OK" }}
+        {{ define "menu-nextprev" }}
+            {{$currentNode := .currentnode }}
+            {{ if ne .menu.Identifier ""}}
+                {{if ($currentNode.IsMenuCurrent "main" .menu) }}
+                    {{ $currentNode.Scratch.Set "NextPageOK" "OK" }}
+                    {{ $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") }}
+                {{else}}
+                    {{if eq ($currentNode.Scratch.Get "NextPageOK") "OK"}}
+                        {{ $currentNode.Scratch.Set "NextPageOK" nil }}
+                        {{ $currentNode.Scratch.Set "nextPage" .menu }}
+                    {{end}}
+                {{end}}
+                {{ $currentNode.Scratch.Set "prevPageTmp" .menu }}
+                {{ range .menu.Children }}
+                    {{ template "menu-nextprev" dict "menu" . "currentnode" $currentNode }}
                 {{ end }}
             {{ end }}
-
-            {{with ($.Scratch.Get "PrevMenu")}}
-                <a class="nav nav-prev" href="{{.URL}}" title="{{.Name}}"> <i class="fa fa-chevron-left"></i></a>
-            {{end}}
-            {{with ($.Scratch.Get "NextMenu")}}
-                <a class="nav nav-next" href="{{.URL}}" title="{{.Name}}" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-            {{end}}
         {{ end }}
+
+
+        {{with ($.Scratch.Get "prevPage")}}
+            <a class="nav nav-prev" href="{{.URL}}" title="{{.Name}}"> <i class="fa fa-chevron-left"></i></a>
+        {{end}}
+        {{with ($.Scratch.Get "nextPage")}}
+            <a class="nav nav-next" href="{{.URL}}" title="{{.Name}}" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        {{end}}
     </div>
 
     </section>
