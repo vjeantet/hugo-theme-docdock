@@ -68,7 +68,7 @@ $( document ).ready(function() {
             return true;
         },
         set: function (value) {
-            location.href=value.href;
+            location.href=value.uri;
         },
         render: function (li, suggestion) {
             var uri = suggestion.uri.substring(1,suggestion.uri.length);
