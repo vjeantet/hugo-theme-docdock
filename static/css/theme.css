@@ -318,10 +318,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #sidebar ul li > a {
     padding: 4px 0;
-}
-#sidebar ul li.visited > a .read-icon {
-    color: #183f81;
-    display: inline;
+    position: relative;
 }
 #sidebar ul li li {
     padding-left: 1rem;
@@ -1011,20 +1008,34 @@ pre .copy-to-clipboard:hover {
     transform-style: preserve-3d;
 }
 
-#sidebar ul.topics > li > a .read-icon {
-    margin-top: 9px;
-}
 #sidebar ul li .read-icon {
     display: none;
     float: right;
-    font-size: 13px;
-    min-width: 16px;
-    margin: 4px 0 0 0;
-    text-align: right;
+    position: absolute;
+    right: 25px;
+    margin: 0 !important;
+    top: 9px;
 }
 #sidebar ul li.visited > a .read-icon {
     color: #2053AB;
-    display: inline;
+    display: block;
+}
+#sidebar ul li.visited.active > a .read-icon {
+    right: 40px;
+}
+
+#sidebar ul li .category-icon {
+    color: grey;
+    display: block;
+    float: right;
+    position: absolute;
+    right: 0px;
+    margin: 0 !important;
+    top: 9px;
+}
+
+#sidebar ul li.active > a .category-icon {
+    right: 15px;
 }
 
 #sidebar #shortcuts h3 {
@@ -1046,9 +1057,6 @@ pre .copy-to-clipboard:hover {
     padding-top: 0px;
     margin-bottom:  0px;
     padding-bottom: 0px;
-}
-.children-li li {
-        
 }
 .children-li p {
     font-size: small;

@@ -9,9 +9,8 @@ identifier = "attachments"
 
 The Attachments shortcode displays a list of files attached to a page.  
 Example :
-{{%alert success%}}
-{{%attachments  /%}}
-{{%/alert%}}
+{{%alert success%}}{{%attachments  /%}}{{%/alert%}}
+
 ## Usage 
 
 The shortcurt lists files found in a **folder** named like your page and ending with **.files**.
@@ -33,10 +32,6 @@ For example:
 * To match file names ending in 'jpg' or 'png', use **.*(jpg|png)**
 
 {{%/alert%}}|
-
-
-
-
 
 
 ## Demo

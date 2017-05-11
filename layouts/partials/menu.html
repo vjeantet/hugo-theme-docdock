@@ -62,6 +62,13 @@
         {{if ($currentNode.HasMenuCurrent "main" .menu) }}parent{{end}}">
             <a href="{{.menu.URL}}">
                 {{.menu.Pre}}{{.menu.Name}}{{.menu.Post}}
+                {{ if .menu.HasChildren }}
+                    {{if or ($currentNode.IsMenuCurrent "main" .menu) ($currentNode.HasMenuCurrent "main" .menu)}}
+                        <i class="fa fa-angle-down fa-lg category-icon"></i>
+                    {{else}}
+                        <i class="fa fa-angle-right fa-lg category-icon"></i>
+                    {{end}}
+                {{end}}
                 {{ if $showvisitedlinks}}<i style="color:grey" class="fa fa-check read-icon"></i>{{end}}
             </a>
             {{ if or ($currentNode.IsMenuCurrent "main" .menu) ($currentNode.HasMenuCurrent "main" .menu) }}
