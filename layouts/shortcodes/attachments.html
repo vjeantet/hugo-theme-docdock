@@ -1,6 +1,6 @@
 <section class="attachments">
 	<label><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span> 
-	{{with .Get "title"}}{{.}}{{else}}Attachments{{end}}
+	{{with .Get "title"}}{{.}}{{else}}{{T "Attachments-label"}}{{end}}
 	</label>
 	{{ range (readDir (printf "./content/%s%s.files" .Page.File.Dir .Page.File.BaseFileName) ) }}
 		{{if ($.Get "pattern")}}
