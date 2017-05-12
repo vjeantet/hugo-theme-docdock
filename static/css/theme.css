@@ -315,6 +315,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     overflow: hidden;
     white-space: nowrap;
     display: block;
+    width: calc(100% - 20px);
+}
+#sidebar.showVisitedLinks ul li a span {
+    width: calc(100% - 45px);
 }
 #sidebar ul li > a {
     padding: 4px 0;
@@ -917,16 +921,16 @@ td {
     display: block;
 }
 #body #breadcrumbs {
-    height: auto;
-    margin-bottom: 0;
-    padding-left: 0;
-    line-height: 1.4;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 70%;
-    display: inline-block;
-    float: left;
+    width: calc(100% - 120px);
+}
+#body #breadcrumbs span.path {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 #body #breadcrumbs span {
     padding: 0 0.1rem;

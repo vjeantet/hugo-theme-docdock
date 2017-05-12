@@ -1,5 +1,5 @@
 
-<nav id="sidebar">
+<nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
   <div id="header-wrapper">
     <div id="header">
       {{ partial "logo.html" . }}
@@ -61,7 +61,7 @@
         {{if ($currentNode.IsMenuCurrent "main" .menu) }}active{{end}} 
         {{if ($currentNode.HasMenuCurrent "main" .menu) }}parent{{end}}">
             <a href="{{.menu.URL}}">
-                {{.menu.Pre}}{{.menu.Name}}{{.menu.Post}}
+                <span>{{.menu.Pre}}{{.menu.Name}}{{.menu.Post}}</span>
                 {{ if .menu.HasChildren }}
                     {{if or ($currentNode.IsMenuCurrent "main" .menu) ($currentNode.HasMenuCurrent "main" .menu)}}
                         <i class="fa fa-angle-down fa-lg category-icon"></i>
