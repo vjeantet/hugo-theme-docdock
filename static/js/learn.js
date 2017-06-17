@@ -215,13 +215,25 @@ jQuery(document).ready(function() {
     $('#top-bar a:not(:has(img)):not(.btn)').addClass('highlight');
     $('#body-inner a:not(:has(img)):not(.btn)').addClass('highlight');
 
-    $('#toc-menu').hover(function() {
-        $('.progress').stop(true, false, true).fadeToggle(100);
-    });
+    var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
+    if (!touchsupport){ // browser doesn't support touch
+        $('#toc-menu').hover(function() {
+            $('.progress').stop(true, false, true).fadeToggle(100);
+        });
 
-    $('.progress').hover(function() {
-        $('.progress').stop(true, false, true).fadeToggle(100);
-    });
+        $('.progress').hover(function() {
+            $('.progress').stop(true, false, true).fadeToggle(100);
+        });
+    }
+    if (touchsupport){ // browser does support touch
+        $('#toc-menu').click(function() {
+            $('.progress').stop(true, false, true).fadeToggle(100);
+        });
+        $('.progress').click(function() {
+            $('.progress').stop(true, false, true).fadeToggle(100);
+        });
+    }
+    
 });
 
 jQuery(window).on('load', function() {
