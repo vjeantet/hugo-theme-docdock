@@ -93,7 +93,7 @@ text.actor {
 /** Section styling */
 .section {
   stroke: none;
-  opacity: 0.2;
+  opacity: 1; /* changed from 0.2; because of conflicts with Pandoc rendering in .Rmd files */
 }
 .section0 {
   fill: #6eaa49;
