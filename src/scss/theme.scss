@@ -119,6 +119,8 @@ $main_highlight_color: lshift_main($main_back_color, 5%, -2%);
 $main_title_text_color: lshift_main($main_text_color, 10%, 10%);
 $main_other_text_color: lshift_main($main_text_color, -17%, -10%);
 
+$main_accent_color: lshift_main($main_back_color, 5.5%, 5.5%);
+
 $main_block_quote_border_color: lshift_main($main_back_color, 5%, 5%);
 
 /* Code */
@@ -1247,7 +1249,7 @@ pre code {
 }
 
 hr {
-    border-bottom: 4px solid #F0F2F4;
+    border-bottom: 4px solid $main_accent_color;
 }
 
 .page-title {
