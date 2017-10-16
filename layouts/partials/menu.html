@@ -61,7 +61,7 @@
 {{- $showvisitedlinks := .showvisitedlinks }}
 {{- $currentNode := .currentnode }}
  {{- with .sect}}
-  {{- if .IsSection}}
+  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- safeHTML .Params.head}}
     <li data-nav-id="{{.URL}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
