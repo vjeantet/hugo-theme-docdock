@@ -1,4 +1,5 @@
-{{ range where .Site.Pages "Source.BaseFileName" "_header" }} 
+{{ $header := print "_header." .Lang }}
+{{ range where .Site.Pages "Source.BaseFileName" $header }} 
 	{{ .Content }} 
 {{else}}
 <span style="font-size:smaller">
