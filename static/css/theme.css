@@ -1031,7 +1031,7 @@ td {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: calc(100% - 120px); }
+  width: calc(100% - 150px); }
 
 #body #breadcrumbs .links {
   font-size: 0.8em; }
