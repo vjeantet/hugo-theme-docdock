@@ -49,29 +49,9 @@
 
 		{{- end}}
 
-		<hr />
-		{{- if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
-		<li>
-			<select id="select-language" onchange="location = this.value;">
-				{{ $siteLanguages := .Site.Languages}}
-				{{ $pageLang := .Page.Lang}}
-				{{ range .Page.AllTranslations }}
-					{{ $translation := .}}
-					{{ range $siteLanguages }}
-						{{ if eq $translation.Lang .Lang }}
-							{{ if eq $pageLang .Lang}}
-								<option id="{{ $translation.Language }}" value="{{ $translation.URL }}" selected>{{ .LanguageName }}</option>
-							{{ else }}
-								<option id="{{ $translation.Language }}" value="{{ $translation.URL }}">{{ .LanguageName }}</option>
-							{{ end }}
-						{{ end }}
-					{{ end }}
-				{{ end }}
-			</select>
-		</li>
-		{{- end }}
-
-
+    <hr />
+    <li>{{- partial "language-selector.html" . }}</li>
+    
     </ul>
 
  <section id="footer">
