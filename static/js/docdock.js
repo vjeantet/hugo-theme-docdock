@@ -106,13 +106,13 @@ jQuery(document).ready(function() {
         return false;
     });
 
-    
+
     jQuery('[data-clear-history-toggle]').on('click', function() {
         sessionStorage.clear();
         location.reload();
         return false;
     });
-    
+
     var ajax;
     jQuery('[data-search-input]').on('input', function() {
         var input = jQuery(this),
@@ -239,7 +239,7 @@ jQuery.extend({
     highlight: function(node, re, nodeName, className) {
         if (node.nodeType === 3) {
             var match = node.data.match(re);
-            if (match && !$(node.parentNode).hasClass("mermaid")) {
+            if (match && !(node.parentNode.ownerSVGElement instanceof SVGElement)) {
                 var highlight = document.createElement(nodeName || 'span');
                 highlight.className = className || 'highlight';
                 var wordNode = node.splitText(match.index);
