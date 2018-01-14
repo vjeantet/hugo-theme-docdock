@@ -20,3 +20,6 @@ The paragraph below shows an example of an Excerpt Include shortcode, containing
 	{{%/*excerpt-include filename="shortcodes/excerpt.md" panel="From excerpt page" /*/%}}
 
 {{%excerpt-include filename="shortcodes/excerpt.md" panel="From excerpt page" /%}}
+ 
+> Don't create an excerpt file in the ```/layouts/shortcodes/``` folder. 
+> In this example, ```shortcodes/filename.md``` is part of the ```exampleSite/content``` folder, and ```shortcodes``` is just a path in the ```/content```.

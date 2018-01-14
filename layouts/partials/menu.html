@@ -69,7 +69,7 @@
      {{- if eq .URL $currentNode.URL}} active{{end -}}
       ">
         <a href="{{ .RelPermalink}}">
-          <span>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</span>
+          <span>{{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}</span>
           {{- if $showvisitedlinks}}<i class="fa fa-circle-thin read-icon"></i>{{end}}
         </a>
     </li>
