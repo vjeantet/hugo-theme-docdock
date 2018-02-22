@@ -3,15 +3,13 @@ baseURL = "/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "DocDock Documentation"
-theme = "hugo-theme-docdock"
-themesdir = "../.."
+theme = "docdock"
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
-
 
 # [Languages]
 # [Languages.en]
@@ -23,9 +21,6 @@ enableMissingTranslationPlaceholders = false
 # title = "Documentation du thème docDock"
 # weight = 2
 # languageName = "Français"
-
-
-
 
 [params]
 editURL = "https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/"
@@ -42,7 +37,6 @@ enableGitInfo = true
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-
 
 [[menu.shortcuts]]
 pre = "<h3>More</h3>"
