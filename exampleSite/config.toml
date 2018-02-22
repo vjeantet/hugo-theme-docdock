@@ -23,6 +23,11 @@ enableMissingTranslationPlaceholders = false
 # languageName = "Français"
 
 [params]
+author_firstname = ""
+author_lastname = ""
+theme_color = ""
+twitter = ""
+
 editURL = "https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/"
 showVisitedLinks = true # default is false
 themeStyle = "flex" # "original" or "flex" # default "flex"
