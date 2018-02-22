@@ -99,16 +99,6 @@ Import sample config from sample site to Hugo root.
 $ cp themes/docdock/exampleSite/config.toml .
 ```
 
-Change following `config.toml` line as needed, depending on method above:
-```
-theme = "<hugo-theme-docdock-dir-name>"
-```
-Comment out following line, so default `themes/` will be used:
-
-```
-# themesdir = "../.."
-```
-
 #### (Bonus)
 Create empty file `.gitkeep` inside `public/` and add following to `.gitignore`.  This way it will keep repo smaller and won't bring build result files and errors to remote checkout places:
 ```
