@@ -18,6 +18,8 @@
     {{ block "main" . }}
     {{ end }}
     
+    {{ partial "disqus.html" . }}
+
     {{if .Site.Params.themeStyle}}
       {{ partial (printf "%s/body-aftercontent.html" .Site.Params.themeStyle) . }}
     {{else}}
