@@ -3,7 +3,7 @@
 {{ .Hugo.Generator }}
 
 <title>{{ .Title }} :: {{ .Site.Title }}</title>
-<link rel="shortcut icon" href="{{"images/favicon.png" | relURL}}" type="image/x-icon" />
+<link rel="shortcut icon" href="{{($.Site.Params.favicon | default "images/favicon.png") | relURL}}" type="image/x-icon" />
 <link href="{{"css/nucleus.css" | relURL}}" rel="stylesheet">
 <link href="{{"css/font-awesome.min.css" | relURL}}" rel="stylesheet">
 <link href="{{"css/hybrid.css" | relURL}}" rel="stylesheet">
