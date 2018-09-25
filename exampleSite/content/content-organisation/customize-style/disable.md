@@ -22,3 +22,9 @@ disableSearch = true
 [params]
 disableHomeIcon = true
 ```
+
+## hide the Github edit link in footer
+```
+[params]
+disableEditLink = true
+```
