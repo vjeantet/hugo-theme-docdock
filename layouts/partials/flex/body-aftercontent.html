@@ -28,10 +28,12 @@
     </div>
     {{end}}
 
+    {{- if not .Site.Params.disableEditLink}}
     <div class="github-link">
       <a href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}" target="blank"><i class="fa fa-code-fork"></i>
         {{T "Edit-this-page"}}</a>
     </div>
+    {{end}}
   </div>
 
 
