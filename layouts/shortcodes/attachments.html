@@ -3,7 +3,7 @@
 		<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
 		{{with .Get "title"}}{{.}}{{else}}{{T "Attachments-label"}}{{end}}
 	</label>
-	{{if eq .Page.File.BaseFileName "index"}}
+	{{if eq .Page.File.BaseFileName "_index"}}
 		{{$.Scratch.Add "filesName" "files"}}
 	{{else}}
 		{{$.Scratch.Add "filesName" (printf "%s.files" .Page.File.BaseFileName)}}
