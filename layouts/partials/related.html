@@ -1,6 +1,5 @@
 <div>
-    {{ $related := .Site.Pages.Related . | first 8 }}
-    {{ $related = sort $related ".Lastmod" "desc" }}
+    {{ $related := sort (.Site.Pages.Related . | first 8 ) ".Lastmod" "desc" }}
     {{ with $related }}
         <h2>Related articles</h2>
         <ul>
