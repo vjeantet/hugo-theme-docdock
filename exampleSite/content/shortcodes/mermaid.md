@@ -31,6 +31,7 @@ graph LR;
         linkStyle 0 stroke:#f00,stroke-width:4px;
         Y --> Z
         Z --> X
+        linkStyle 1,2 interpolate basis stroke:#0f0,stroke-width:2px;
         X --> A1
         subgraph right
             A2 --> B2
@@ -57,6 +58,7 @@ graph LR;
     linkStyle 0 stroke:#f00,stroke-width:4px;
     Y --> Z
     Z --> X
+    linkStyle 1,2 interpolate basis stroke:#0f0,stroke-width:2px;
     X --> A1
     subgraph right
         A2 --> B2
