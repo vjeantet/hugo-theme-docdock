@@ -31,7 +31,7 @@
             {{- range sort . "Weight"}}
                 <li class="" role="">
                     {{- .Pre -}}
-                    <a href="{{.URL}}" target="_blank" rel="noopener">{{safeHTML .Name}}</a>
+                    <a href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank" {{end}}rel="noopener">{{safeHTML .Name}}</a>
                     {{- .Post -}}
                 </li>
             {{- end}}
