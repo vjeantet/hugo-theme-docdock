@@ -68,7 +68,7 @@ header {
       vertical-align: middle; }
     header .logo img {
       height: 32px;
-      margin-right: 0.5rem; }
+      margin-right: 10rem; }
   header nav.shortcuts {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -244,8 +244,11 @@ section strong {
 
 .searchbox {
   margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 0rem;
-  padding-top: 1rem;
+  padding: 0rem 1rem;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-grow: 1;
+  max-width: 400px;
   color: #012a3c;
   text-align: center; }
 
@@ -259,7 +262,7 @@ section strong {
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 6px;
-  width: 80%; }
+}
 
 .searchbox span {
   position: absolute;
@@ -713,7 +716,11 @@ ul.children.children-card {
     padding: 1rem 2rem; }
 
   header {
-    padding: 0 1rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 1rem;
+  }
 
   header > nav.shortcuts > li a {
     width: 3.5rem; }
