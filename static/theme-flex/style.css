@@ -31,13 +31,14 @@
   --MENU-HEADER-BG-color:#f1f6f8; /* Background color of menu header */
   --MENU-HEADER-BORDER-color:#64bbe4; /* Color of menu header border */
   --MENU-ITEM-BORDER-color:#64bbe4; /* Color of underline under selected menu item */
+  --NAV_BAR_BG-color: rgb(33, 151, 202);
 }
 
 header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #333;
+  background-color: var(--NAV_BAR_BG-color);
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
