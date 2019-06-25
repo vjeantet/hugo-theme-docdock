@@ -723,6 +723,7 @@ ul.children.children-card {
   }
 
   header > nav.shortcuts > li a {
+    display: none;
     width: 3.5rem; }
 
   header > nav.shortcuts > li .fa {
