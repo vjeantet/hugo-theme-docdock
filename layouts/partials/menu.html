@@ -27,7 +27,7 @@
         ">
       <div>
       <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
-        
+
         {{- if ne $numberOfPages 0 }}
           {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
             <i class="fa fa-angle-down fa-lg category-icon"></i>
@@ -65,6 +65,7 @@
       {{- end}}
     </li>
   {{- else}}
+
     {{- if not .Params.Hidden }}
       <li data-nav-id="{{.URL}}" class="dd-item
      {{- if eq .URL $currentNode.URL}} active{{end -}}

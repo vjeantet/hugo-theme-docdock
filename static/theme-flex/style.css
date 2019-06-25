@@ -26,6 +26,13 @@
   font-family: 'RobotoMono';
   font-weight: 500;
   src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("../fonts/RobotoMono-Medium.ttf") format("truetype"); }
+
+:root {
+  --MENU-HEADER-BG-color:#f1f6f8; /* Background color of menu header */
+  --MENU-HEADER-BORDER-color:#64bbe4; /* Color of menu header border */
+  --MENU-ITEM-BORDER-color:#64bbe4; /* Color of underline under selected menu item */
+}
+
 header {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -45,7 +52,7 @@ header {
   top: 0;
   z-index: 100; }
   header:after {
-    background: url(ribbon.png) 0 0/100% no-repeat;
+    background: var(--MENU-HEADER-BORDER-color) 0 0/100% no-repeat;
     content: '';
     height: .35rem;
     left: 0;
@@ -118,6 +125,12 @@ article > aside {
       font-weight: 100;
       font-size: 130%;
       margin-left: 1rem; }
+    article > aside .menu #logo img {
+      width: 30%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
     article > aside .menu ul {
       display: none; }
     article > aside .menu > .dd-item {
@@ -136,7 +149,7 @@ article > aside {
         background-color: #eee; }
         article > aside .menu .dd-item.active > div * {
           font-weight: bold;
-          border-bottom: dotted 1px red; }
+          border-bottom: dotted 1px var(--MENU-ITEM-BORDER-color); }
       article > aside .menu .dd-item.haschildren > div {
         margin-left: -20px; }
       article > aside .menu .dd-item div {

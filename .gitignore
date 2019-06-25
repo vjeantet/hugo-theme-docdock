@@ -1,6 +1,6 @@
 .DS_Store
 public/
-
+.idea
 /static/scss/original/.sass-cache/
 
 /static/theme-original/style.css.map
