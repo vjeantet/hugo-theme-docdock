@@ -46,7 +46,7 @@ header {
   header:after {
     background: var(--MENU-HEADER-BORDER-color) 0 0/100% no-repeat;
     content: '';
-    height: .35rem;
+    height: 0rem;
     left: 0;
     position: absolute;
     right: 0;
