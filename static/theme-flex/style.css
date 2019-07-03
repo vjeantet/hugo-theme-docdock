@@ -4,29 +4,20 @@
   src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot");
   src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-UltraLight-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-UltraLight-webfont.svg#novecento_sans_wideultralight") format("svg");
   font-style: normal;
-  font-weight: 200; }
+  font-weight: 200;
+}
 @font-face {
-  font-family: 'Roboto';
-  font-weight: 400;
-  src: local("Roboto Regular"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.ttf") format("truetype"); }
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Work_Sans_300.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_300.woff") format("woff"), url("../fonts/Work_Sans_300.woff2") format("woff2"), url("../fonts/Work_Sans_300.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_300.ttf") format("truetype");
+}
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Work Sans';
+  font-style: normal;
   font-weight: 500;
-  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/Roboto-Medium.ttf") format("truetype"); }
-@font-face {
-  font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/Roboto-Italic.ttf") format("truetype"); }
-@font-face {
-  font-family: 'RobotoMono';
-  font-weight: 400;
-  src: local("Roboto Mono Regular"), local("RobotoMono-Regular"), url("../fonts/RobotoMono-Regular.ttf") format("truetype"); }
-@font-face {
-  font-family: 'RobotoMono';
-  font-weight: 500;
-  src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("../fonts/RobotoMono-Medium.ttf") format("truetype"); }
-
+  src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype");
+}
 :root {
   --MENU-HEADER-BG-color:#f1f6f8; /* Background color of menu header */
   --MENU-HEADER-BORDER-color:#64bbe4; /* Color of menu header border */
@@ -139,7 +130,7 @@ article > aside {
     article > aside .menu .dd-item {
       padding-left: 1rem;
       list-style: none;
-      font-size: 13px; }
+      font-size: 16px; }
       article > aside .menu .dd-item.alwaysopen > ul {
         display: block; }
       article > aside .menu .dd-item.parent > ul {
@@ -201,8 +192,10 @@ body {
   height: 100%; }
 
 html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px; }
+  font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
 
 body {
   background-color: #fff;
@@ -214,7 +207,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  line-height: 1.5rem; }
+  line-height: 1.8rem; }
 
 :disabled {
   pointer-events: none; }
@@ -334,7 +327,13 @@ article section.page {
   article section.page h1 {
     margin-top: 4rem; }
   article section.page h2 {
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    line-height: 1.2;
+  }
+  article section.page h3 {
+    margin-top: 3rem;
+    line-height: 1.2;
+  }
   article section.page table {
     width: 100%;
     margin-bottom: 2em;
