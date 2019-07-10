@@ -5,12 +5,16 @@
 <link rel="shortcut icon" href="{{"img/favicon.ico" | relURL}}" type="image/x-icon" />
 <link href="{{"css/font-awesome.min.css" | relURL}}" rel="stylesheet">
 <link href="{{"css/nucleus.css" | relURL}}" rel="stylesheet">
+<link href="{{"css/jquery-ui.min.css" | relURL}}" rel="stylesheet">
+<link href="{{"css/jquery-ui.structure.min.css" | relURL}}" rel="stylesheet">
+<link href="{{"css/jquery-ui.theme.min.css" | relURL}}" rel="stylesheet">
 <link href="{{(printf "theme-%s/style.css" (.Site.Params.themeStyle| default "flex")  ) | relURL}}" rel="stylesheet">
 {{with .Site.Params.themeVariant}}
 	<link href="{{(printf "theme-%s/variant-%s.css" ($.Site.Params.themeStyle| default "flex") .) | relURL}}" rel="stylesheet">
 {{end}}
 <link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
-<script src="{{"js/jquery-2.x.min.js" | relURL}}"></script>
+<script src="{{"js/jquery-3.2.1.min.js" | relURL}}"></script>
+<script src="{{"js/jquery-ui-1.12.1.min.js" | relURL}}"></script>
 <script type="text/javascript">
       var baseurl = "{{.Site.BaseURL}}";
 </script>
