@@ -8,6 +8,7 @@
 <link href="{{"css/jquery-ui.min.css" | relURL}}" rel="stylesheet">
 <link href="{{"css/jquery-ui.structure.min.css" | relURL}}" rel="stylesheet">
 <link href="{{"css/jquery-ui.theme.min.css" | relURL}}" rel="stylesheet">
+<link href="{{"css/tabs.css" | relURL}}" rel="stylesheet">
 <link href="{{(printf "theme-%s/style.css" (.Site.Params.themeStyle| default "flex")  ) | relURL}}" rel="stylesheet">
 {{with .Site.Params.themeVariant}}
 	<link href="{{(printf "theme-%s/variant-%s.css" ($.Site.Params.themeStyle| default "flex") .) | relURL}}" rel="stylesheet">

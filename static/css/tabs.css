@@ -1,0 +1,22 @@
+.ui-tabs .ui-tabs-panel {
+    padding: 0;
+}
+
+.ui-widget-header .ui-state-active {
+    border: 1px solid #c5c5c5;
+}
+
+.ui-tabs-active .ui-tabs-anchor {
+    background: var(--MENU-HEADER-BORDER-color);
+    background-color: var(--MENU-HEADER-BORDER-color);
+    border-bottom-width: 0;
+}
+
+.ui-tabs pre {
+    margin: 0;
+}
+
+.ui-widget-header {
+    background: #FFFFFF;
+    border: 0;
+}
