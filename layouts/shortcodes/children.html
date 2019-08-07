@@ -49,25 +49,14 @@
 	{{- $numn := add $num $.count }}
 
 	{{- (printf "<h%d>" $numn)|safeHTML}}
-		<a href="{{.URL}}" >{{ .Title }}</a>
+		<p><a href="{{.URL}}" >{{ .Title }}</a>: {{.Description}}</p>
 	{{- (printf "</h%d>" $numn)|safeHTML}}
 {{- else}}
 	{{- (printf "<%s>" $.style)|safeHTML}}
-		<a href="{{.URL}}" >{{ .Title }}</a>
+		<p><a href="{{.URL}}" >{{ .Title }}</a>: {{.Description}}</p>
 	{{- (printf "</%s>" $.style)|safeHTML}}
 {{- end}}
 
-
-
-
-
-			{{- if $.description}}
-				{{- if .Description}}
-<p>{{.Description}}</p>
-				{{- else}}
-<p>{{.Summary}}</p>
-				{{- end}}
-			{{- end}}
 </span>
 
 
