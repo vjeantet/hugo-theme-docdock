@@ -7,7 +7,7 @@
     <nav class="shortcuts">
         {{- range sort . "Weight"}}
             <li class="" role="">
-                <a href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
+                <a href="{{.RelPermalink}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
                   {{safeHTML .Name}}
                 </a>
             </li>

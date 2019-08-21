@@ -15,7 +15,7 @@
 {{- $level := .level }}
  {{- with .sect}}
   {{- if .IsSection}}
-    <option value="{{ .RelPermalink}}" {{if eq .URL $currentNode.URL}} selected{{end}}>
+    <option value="{{ .RelPermalink}}" {{if eq .Permalink $currentNode.Permalink}} selected{{end}}>
   {{if gt $level 1 }}
     {{- range after 1 (seq $level)}}-{{ end }} 
   {{end}} {{.Title}}</option>
@@ -50,7 +50,7 @@
   {{end}}
   {{- else}}
     {{- if not .Params.Hidden }}
-      <option value="{{ .RelPermalink}}" {{if eq .URL $currentNode.URL}} selected{{end}}> 
+      <option value="{{ .RelPermalink}}" {{if eq .Permalink $currentNode.Permalink}} selected{{end}}> 
 {{- range after 1 (seq $level)}}-{{ end }} {{.Title}}</option>
     {{- end}}
   {{- end}}
