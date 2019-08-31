@@ -251,7 +251,7 @@ body {
   -moz-transition: color 0.35s ease;
   -ms-transition: color 0.35s ease;
   transition: color 0.35s ease; }
-
+f
 .anchor:hover {
   color: #238fbd;
   -webkit-transition: color 0.35s ease;
@@ -1402,7 +1402,7 @@ pre .copy-to-clipboard:hover {
     background: white !important; }
 
   h1, h2, h3, h4, h5, h6 {
-    color: black !important;
+    color: #eee !important;
     background: white !important; }
 
   #body {
