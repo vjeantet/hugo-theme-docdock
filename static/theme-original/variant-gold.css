@@ -12,7 +12,7 @@
 }
 
 #select-language {
-background: --MAIN-HOVER-color;
+background: var(--MAIN-HOVER-color);
 border-color: white;
 border-radius: 4px;
 padding: 4px
