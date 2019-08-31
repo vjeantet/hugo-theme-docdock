@@ -1,0 +1,44 @@
+[create-header-md]
+other = "Erstelle die Datei content/_header.md für ein individuellen Header"
+
+[create-footer-md]
+other = "Erstelle die Datei content/_footer.md für einen individuellen Footer"
+
+[Search-placeholder]
+other = "Suche..."
+
+[Clear-History]
+other = "Lösche Verlauf"
+
+[Page]
+other = "Seite"
+
+[Next-Pages]
+other = "Seite vor"
+
+[Previous-Pages]
+other = "Seite zurück"
+
+[pagination-on]
+other = "von"
+
+[Attachments-label]
+other = "Anhang"
+
+[title-404]
+other = "Fehler"
+
+[message-404]
+other = "Woops. Diese Seite existiert nicht."
+
+[Go-to-homepage]
+other = "Zur Startseite"
+
+[Edit-this-page]
+other = "Editiere diese Seite"
+
+[Expand-title]
+other = "Ausklappen..."
+
+[last-update-on]
+other = "Letzte Änderung am"
