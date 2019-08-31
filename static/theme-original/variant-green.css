@@ -10,6 +10,14 @@
     --MENU-ACTIVE-LINK-color:white;
     
 }
+
+#select-language {
+background: var(--MAIN-HOVER-color);
+border-color: white;
+border-radius: 4px;
+padding: 4px
+}
+
 a, #sidebar ul li.visited > a .read-icon {
 	color: var(--SIDE-MAIN-color);
 }
