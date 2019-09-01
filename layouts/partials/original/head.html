@@ -1,5 +1,17 @@
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="News, Nachrichten und aktuelle Meldungen aus allen Ressorts. Politik, Wirtschaft, Sport, Feuilleton und Finanzen im Überblick.">
+<meta name="keywords" content="News, Politik, Wirtschaft, Gesellschaft, Finanzen, Sport, Feuilleton, Technik &amp; Motor, Wissen, Reise, Beruf &amp; Chance, Rhein-Main">
+
+
+<meta name="author" content="Jan Marloth"/>
+<meta name="publisher" content="Jan Marloth"/>
+<meta name="copyright" content="Jan Marloth 2019"/>
+<meta name="distribution" content="global"/>
+
+<base href="https://www.mediaevent.de/javascript/" />
+
 <meta name="revised" content="{{ now.Format "2006-01-02T15:04:05 MST" }}">
 <title>{{ .Title }} :: {{ .Site.Title }}</title>
 <link rel="shortcut icon" href="{{"images/favicon.png" | relURL}}" type="image/x-icon" />
@@ -9,9 +21,7 @@
 <link href="{{"css/featherlight.min.css" | relURL}}" rel="stylesheet">
 <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
 <link href="{{"theme-original/style.css" | relURL}}" rel="stylesheet">
-{{with .Site.Params.themeVariant}}
-  <link href="{{(printf "theme-original/variant-%s.css" .) | relURL}}" rel="stylesheet">
-{{end}}
+<link href="{{(printf "theme-original/variant-%s.css" .) | relURL}}" rel="stylesheet">
 <link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
 <script src="{{"js/jquery-2.x.min.js" | relURL}}"></script>
 <style type="text/css">
