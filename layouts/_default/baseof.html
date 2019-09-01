@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
   <head>
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+<<<<<<< HEAD
 
     {{ partial "original/head.html"  . }}
 
+=======
+    {{if .Site.Params.themeStyle}}
+      {{ partial (printf "%s/head.html" .Site.Params.themeStyle) . }}
+    {{else}}
+      {{ partial "flex/head.html" . }}
+    {{end}}
+>>>>>>> parent of 5ce4ca2... Ausgemerzt
   </head>
   <body data-url="{{ .RelPermalink }}">
-
-    {{ partial "original/body-beforecontent.html" . }}
-
+    {{if .Site.Params.themeStyle}}
+      {{ partial (printf "%s/body-beforecontent.html" .Site.Params.themeStyle) . }}
+    {{else}}
+      {{ partial "flex/body-beforecontent.html" . }}
+    {{end}}
+    
     {{ block "main" . }}
     {{ end }}
-
-    {{ partial "original/body-aftercontent.html"  . }}
+    
+    {{if .Site.Params.themeStyle}}
+      {{ partial (printf "%s/body-aftercontent.html" .Site.Params.themeStyle) . }}
+    {{else}}
+      {{ partial "flex/body-aftercontent.html" . }}
+    {{ end }}
 
     {{ block "footer" . }}
     {{ end }}
