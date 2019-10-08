@@ -8,7 +8,7 @@
       {{ partial "flex/head.html" . }}
     {{end}}
   </head>
-  <body data-url="{{ .RelPermalink }}">
+  <body data-url="{{ .Site.Data.Solo.DocsVersion }}{{ .RelPermalink }}">
     {{if .Site.Params.themeStyle}}
       {{ partial (printf "%s/body-beforecontent.html" .Site.Params.themeStyle) . }}
     {{else}}

@@ -2,6 +2,6 @@
 
 {{- range first 10 .Site.Pages }}
 <li>
-{{ .Date.Format "02/01/2006" }} - <a href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ .Date.Format "02/01/2006" }} - <a href="{{ .Site.Data.Solo.DocsVersion }}{{ .RelPermalink }}">{{ .Title }}</a>
 </li>
 {{ end }}

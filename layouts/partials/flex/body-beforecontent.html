@@ -9,6 +9,7 @@
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
         {{- partial "search.html" . }}
+        {{ .Site.Data.Solo.CodeVersion }}
     {{- with .Site.Menus.shortcuts}}
         {{- range sort . "Weight"}}
             <li class="" role="">
@@ -24,8 +25,8 @@
   <aside>
     <ul class="menu">
 
-        <a id="logo" href="{{ .Site.BaseURL }}">
-            <img src="{{ .Site.Params.logoPath }}" >
+        <a id="logo" href="{{ .Site.BaseURL }}{{ .Site.Data.Solo.DocsVersion }}">
+            <img src="{{ .Site.Data.Solo.DocsVersion }}{{ .Site.Params.logoPath }}" >
         </a>
         <br />
 

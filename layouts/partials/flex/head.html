@@ -2,21 +2,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="{{ now.Format "2006-01-02T15:04:05 MST" }}">
 <title>{{ .Title }} :: {{ .Site.Title }}</title>
-<link rel="shortcut icon" href="{{"img/favicon.ico" | relURL}}" type="image/x-icon" />
-<link href="{{"css/font-awesome.min.css" | relURL}}" rel="stylesheet">
-<link href="{{"css/nucleus.css" | relURL}}" rel="stylesheet">
-<link href="{{"css/jquery-ui.min.css" | relURL}}" rel="stylesheet">
-<link href="{{"css/jquery-ui.structure.min.css" | relURL}}" rel="stylesheet">
-<link href="{{"css/jquery-ui.theme.min.css" | relURL}}" rel="stylesheet">
-<link href="{{"css/tabs.css" | relURL}}" rel="stylesheet">
-<link href="{{(printf "theme-%s/style.css" (.Site.Params.themeStyle| default "flex")  ) | relURL}}" rel="stylesheet">
+<link rel="shortcut icon" href="{{ .Site.Data.Solo.DocsVersion }}{{"img/favicon.ico" | relURL}}" type="image/x-icon" />
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{"css/font-awesome.min.css" | relURL}}" rel="stylesheet">
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{"css/nucleus.css" | relURL}}" rel="stylesheet">
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{"css/jquery-ui.min.css" | relURL}}" rel="stylesheet">
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{"css/jquery-ui.structure.min.css" | relURL}}" rel="stylesheet">
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{"css/jquery-ui.theme.min.css" | relURL}}" rel="stylesheet">
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{"css/tabs.css" | relURL}}" rel="stylesheet">
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{(printf "theme-%s/style.css" (.Site.Params.themeStyle| default "flex")  ) | relURL}}" rel="stylesheet">
 {{with .Site.Params.themeVariant}}
-	<link href="{{(printf "theme-%s/variant-%s.css" ($.Site.Params.themeStyle| default "flex") .) | relURL}}" rel="stylesheet">
+<link href="{{ .Site.Data.Solo.DocsVersion }}{{(printf "theme-%s/variant-%s.css" ($.Site.Params.themeStyle| default "flex") .) | relURL}}" rel="stylesheet">
 {{end}}
-<link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
-<script src="{{"js/jquery-3.2.1.min.js" | relURL}}"></script>
-<script src="{{"js/jquery-ui-1.12.1.min.js" | relURL}}"></script>
+<link rel="stylesheet" href="{{ .Site.Data.Solo.DocsVersion }}{{"css/bootstrap.min.css" | relURL}}">
+<script src="{{ .Site.Data.Solo.DocsVersion }}{{"js/jquery-3.2.1.min.js" | relURL}}"></script>
+<script src="{{ .Site.Data.Solo.DocsVersion }}{{"js/jquery-ui-1.12.1.min.js" | relURL}}"></script>
 <script type="text/javascript">
-      var baseurl = "{{.Site.BaseURL}}";
+      // determine baseurl dynamically to allow support deployment to an arbitrary url (esp. during testing)
+      var baseurl = window.origin + "{{.Site.Data.Solo.DocsVersion}}";
 </script>
 {{ partial "custom-head.html" . }}

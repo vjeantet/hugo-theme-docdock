@@ -26,7 +26,7 @@
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
       <div>
-      <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{or .Params.menuTitle .Title}}{{safeHTML .Params.Post}}</a>
+        <a href="{{ .Site.Data.Solo.DocsVersion }}{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{or .Params.menuTitle .Title}}{{safeHTML .Params.Post}}</a>
 
         {{- if ne $numberOfPages 0 }}
           {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
@@ -71,7 +71,7 @@
      {{- if eq .URL $currentNode.URL}} active{{end -}}
       ">
         <div>
-          <a href="{{ .RelPermalink}}">
+          <a href="{{ .Site.Data.Solo.DocsVersion }}{{ .RelPermalink}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
           {{- if $showvisitedlinks}}<i class="fa fa-circle-thin read-icon"></i>{{end}}

@@ -53,7 +53,7 @@
 	{{- (printf "</h%d>" $numn)|safeHTML}}
 {{- else}}
 	{{- (printf "<%s>" $.style)|safeHTML}}
-		<p><a href="{{.URL}}" >{{ .Title }}</a>: {{.Description}}</p>
+		<p><a href="{{print .Site.Data.Solo.DocsVersion .URL}}" >{{ .Title }}</a>: {{.Description}}</p>
 	{{- (printf "</%s>" $.style)|safeHTML}}
 {{- end}}
 

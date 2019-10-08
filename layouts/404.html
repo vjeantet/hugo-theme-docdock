@@ -8,7 +8,7 @@
       {{ partial "flex/head.html" . }}
     {{end}}
   </head>
-  <body data-url="{{ .RelPermalink }}">
+  <body data-url="{{ .Site.Data.Solo.DocsVersion }}{{ .RelPermalink }}">
     {{if .Site.Params.themeStyle}}
       {{ partial (printf "%s/body-beforecontent.html" .Site.Params.themeStyle) . }}
     {{else}}
@@ -21,7 +21,7 @@
 	<p>{{T "message-404"}}</p>
 	<p></p>
 	<p><a href="{{.Site.BaseURL}}">{{T "Go-to-homepage"}}</a></p>
-	<p><img src="{{"images/gopher-404.jpg" | relURL}}" style="width:50%"></img></p>    
+	<p><img src="{{ .Site.Data.Solo.DocsVersion }}{{"images/gopher-404.jpg" | relURL}}" style="width:50%"></img></p>    
     
     {{if .Site.Params.themeStyle}}
       {{ partial (printf "%s/body-aftercontent.html" .Site.Params.themeStyle) . }}

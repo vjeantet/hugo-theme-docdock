@@ -1,9 +1,9 @@
 <article class="post {{ .Section }}">
     <header class="post-header">
-        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2 class="post-title"><a href="{{ .Site.Data.Solo.DocsVersion }}{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
+        <p>{{ .Summary }} <a class="read-more" href="{{ .Site.Data.Solo.DocsVersion }}{{.RelPermalink}}">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

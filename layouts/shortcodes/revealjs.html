@@ -1,9 +1,9 @@
-<iframe id="slideFrame" src="{{"none.html" | relURL }}" style="width:{{with .Get "width"}}{{.}}{{else}}100%{{end}};height:{{with .Get "height"}}{{.}}{{else}}30em{{end}}; border:0px"></iframe>
+<iframe id="slideFrame" src="{{ .Site.Data.Solo.DocsVersion }}{{"none.html" | relURL }}" style="width:{{with .Get "width"}}{{.}}{{else}}100%{{end}};height:{{with .Get "height"}}{{.}}{{else}}30em{{end}}; border:0px"></iframe>
 
 <div id="slideContent">
-	<link rel="stylesheet" href="{{"revealjs/css/reveal.css"|relURL}}">
-	<link rel="stylesheet" href="{{"revealjs/css/theme/"|relURL}}{{with .Get "theme"}}{{.|safeHTML}}{{else}}league{{end}}.css" id="theme">
-	<link rel="stylesheet" href="{{"revealjs/lib/css/zenburn.css"|relURL}}">
+	<link rel="stylesheet" href="{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/css/reveal.css"|relURL}}">
+	<link rel="stylesheet" href="{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/css/theme/"|relURL}}{{with .Get "theme"}}{{.|safeHTML}}{{else}}league{{end}}.css" id="theme">
+	<link rel="stylesheet" href="{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/lib/css/zenburn.css"|relURL}}">
 
 	<div class="reveal">
 	<div class="slides">
@@ -17,8 +17,8 @@
 	</div>
 	</div>
 
-	<script async src="{{"/revealjs/lib/js/head.min.js"|relURL}}"></script>
-	<script async src="{{"/revealjs/js/reveal.js"|relURL}}"></script>
+	<script async src="{{ .Site.Data.Solo.DocsVersion }}{{"/revealjs/lib/js/head.min.js"|relURL}}"></script>
+	<script async src="{{ .Site.Data.Solo.DocsVersion }}{{"/revealjs/js/reveal.js"|relURL}}"></script>
 	<script>
 	function initSlides() {
 		Reveal.initialize({
@@ -33,12 +33,12 @@
 		        // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 		        // Optional libraries used to extend on reveal.js
 		        dependencies: [
-		          { src: '{{"revealjs/lib/js/classList.js"|relURL}}"', condition: function() { return !document.body.classList; } },
-		          { src: '{{"revealjs/plugin/markdown/marked.js"|relURL}}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		          { src: '{{"revealjs/plugin/markdown/markdown.js"|relURL}}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		          { src: '{{"revealjs/plugin/highlight/highlight.js"|relURL}}', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-		          { src: '{{"revealjs/plugin/zoom-js/zoom.js"|relURL}}', async: true, condition: function() { return !!document.body.classList; } },
-		          { src: '{{"revealjs/plugin/notes/notes.js"|relURL}}', async: true, condition: function() { return !!document.body.classList; } }
+		          { src: '{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/lib/js/classList.js"|relURL}}"', condition: function() { return !document.body.classList; } },
+		          { src: '{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/plugin/markdown/marked.js"|relURL}}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/plugin/markdown/markdown.js"|relURL}}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/plugin/highlight/highlight.js"|relURL}}', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/plugin/zoom-js/zoom.js"|relURL}}', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '{{ .Site.Data.Solo.DocsVersion }}{{"revealjs/plugin/notes/notes.js"|relURL}}', async: true, condition: function() { return !!document.body.classList; } }
 		        ]
 		      });
 	}
