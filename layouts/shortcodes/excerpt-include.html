@@ -1,3 +1,4 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
 {{ $excerpt := findRE "(?ms){{%\\s*excerpt[^%]*%}}(.|\n)*?{{%\\s*/excerpt\\s*%}}" ( readFile (printf "./content/%s" (.Get "filename")) ) }}
 {{ range $excerpt }}
 	{{if ($.Get "panel")}}
