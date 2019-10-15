@@ -1,4 +1,4 @@
 {{ $protoName := .Get "name" }}
 {{ $protoDocsSummary := index .Site.Data.ProtoMap.apis $protoName }}
 {{ $protoDocsUrl := lower $protoDocsSummary.relativepath }}
-<a {{ printf "href=/%v%v" .Site.Data.Solo.DocsVersion $protoDocsUrl | safeHTMLAttr }}>{{ $protoName }}</a>
+<a {{ printf "href=%v/%v" .Site.Data.Solo.DocsVersion $protoDocsUrl | safeHTMLAttr }}>{{ $protoName }}</a>
