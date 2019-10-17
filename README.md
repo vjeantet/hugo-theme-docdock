@@ -36,7 +36,50 @@ apis:
 
 ## This theme fork introduces a few new shortcodes
 
+### protobuf
+
 - `layouts/shortcodes/protobuf.html`
-  - useful when wanting to link to a protobuf
+- useful when wanting to link to a protobuf
+- parameters:
+  - name (required) - import path of the proto
+  - display (optional) - text to display on the link, if not specified, defaults to the name
+
+#### Examples
+
+- the following two examples produce the same href: `http://[domain]/[product and version scope]/api/github.com/solo-io/gloo/projects/gloo/api/v1/proxy.proto.sk/#consulservicedestination`
+
+1. link with the default text: "gloo.solo.io.ConsulServiceDestination"
+
+```
+{{< protobuf name="gloo.solo.io.ConsulServiceDestination" >}}
+```
+
+2. link with custom display text: "consul destination type"
+
+```
+{{<
+protobuf
+name="gloo.solo.io.ConsulServiceDestination"
+display="consul destination type"
+>}}
+```
+
+### versioned_link_path
+
 - `layouts/shortcodes/versioned_link_path.html`
-  - required in order for links to work (injects version prefix)
+- required in order for links to work (injects version prefix)
+
+
+#### Examples
+
+- in a markdown link
+
+```
+[Gloo Routing]({{< versioned_link_path fromRoot="/gloo_routing" >}})
+```
+
+- in an `href`
+
+```
+<a href="docker-compose-file"><img src='{{% versioned_link_path fromRoot="/img/docker.png" %}}' width="60"/></a>
+```
