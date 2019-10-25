@@ -9,7 +9,11 @@
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
         {{- partial "search.html" . }}
-        {{ .Site.Data.Solo.CodeVersion }}
+        <div title="v{{.Site.Data.Solo.CodeVersion}}"
+             style="overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;"
+        >v{{ .Site.Data.Solo.CodeVersion }}</div>
     {{- with .Site.Menus.shortcuts}}
         {{- range sort . "Weight"}}
             <li class="" role="">
