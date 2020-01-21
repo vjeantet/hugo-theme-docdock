@@ -1,0 +1,39 @@
+div.notices {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 400;
+  line-height: 1.15rem;
+}
+div.notices p:first-child:before {
+  color: inherit !important;
+  position: relative;
+  left: -20px;
+  top: 0;
+}
+div.notices.note p:first-child:after {
+  content: '' !important;
+}
+
+div.notices.note {
+  background: #EAF8FF;
+  color: #2196C9;
+  border-top: 1px solid #2196C9;
+  border-color: #2196C9;
+}
+
+div.notices.info {
+  background: #FFF6E5;
+  color: #C68A19;
+  border-top: 1px solid #FFB831;
+  border-color: #FFB831;
+}
+
+div.notices.warning {
+  background: #FCCCB3;
+  color: #8B2E00;
+  border-top: 1px solid #D75B1D;
+  border-color: #D75B1D;
+}
+
+
+

@@ -1,0 +1,42 @@
+.searchbox input {
+  border: 0;
+  background: #0f7fb1;
+  color: white;
+  border-radius: 10px;
+}
+
+.searchbox input::placeholder {
+  color: white;
+}
+
+
+
+.fa.fa-link {
+  color: #2196C9;
+  background: white;
+  line-height: 2rem;
+}
+
+.fa.fa-clipboard,
+.fa.fa-copy {
+  background: #2196C9;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  min-width: 75px;
+  padding: 0 .75rem;
+  line-height: 2.25rem;
+}
+
+.fa.fa-clipboard,
+.fa.fa-copy {
+  display: flex;
+}
+.fa.fa-clipboard:after,
+.fa.fa-copy:after {
+  content: "copy";
+  font-family: "Proxima Nova", "Work Sans", "Helvetica", "Tahoma", "Geneva",
+  "Arial", sans-serif;
+  font-weight: 500;
+  margin-left: .5rem;
+}

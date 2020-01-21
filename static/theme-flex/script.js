@@ -142,7 +142,7 @@ jQuery(document).ready(function() {
                 clipInit = true;
             }
 
-            code.before('<span class="copy-to-clipboard" title="Copy to clipboard"><span class="fa fa-clipboard" aria-hidden="true"></span></span>');
+            code.before('<span class="copy-to-clipboard" title="Copy to clipboard"><span class="fa fa-copy" aria-hidden="true"></span></span>');
             $('.copy-to-clipboard').on('mouseleave', function() {
                 $(this).attr('aria-label', null).removeClass('tooltipped tooltipped-s tooltipped-w');
             });

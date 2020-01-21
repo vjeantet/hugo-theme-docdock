@@ -1,0 +1,95 @@
+article > aside {
+  padding-left: 1rem;
+  padding-right: .5rem;
+  width: 21rem; 
+}
+
+article > aside .menu {
+  padding-left: 1rem;
+}
+article > aside .menu .topic-logo {
+  margin-left: 20px;
+}
+article > aside .menu .topic-logo img {
+  width: 250px;
+  height: 80px;
+}
+
+/* ITEMS */
+article > aside .menu .dd-item {
+  color: #ADB3BC;
+  padding-left: .5rem;
+  margin-left: -1px;
+}
+article > aside .menu .dd-item > div,
+article > aside .menu .dd-item ul li.dd-item > div  {
+  border-left: 5px solid transparent;
+}
+article > aside .menu .dd-item ul li.dd-item > div  {
+  padding-left: 0;
+}
+
+article > aside .menu .dd-item > div {
+  margin-left: -1px;
+}
+article > aside .menu .dd-item > div, 
+article > aside .menu .dd-item.haschildren > div {
+  margin-left: -15px;
+  padding-left: 0;
+}
+
+article > aside .menu .dd-item div a {
+  order: 1;
+}
+article > aside .menu .dd-item div i.category-icon {
+  order: 2;
+}
+article > aside .menu .dd-item > ul li {
+  border-left: none;
+  padding-left: 0;
+}
+
+article > aside .menu .dd-item.haschildren ul li {
+  padding-left: 0;
+}
+article > aside .menu .dd-item.haschildren ul li.dd-item > div  {
+  padding-left: 0;
+}
+article > aside .menu .dd-item.haschildren ul li.dd-item > div a {
+  padding-left: .5rem;
+}
+
+/* OPENED + ACTIVE */
+article > aside .menu .dd-item.active > div,
+article > aside .menu .dd-item ul li.dd-item.active > div {
+  border-left-color: #6AC7F0;
+}
+
+article > aside .menu .dd-item.parent > ul {
+  border-left: 1px dashed #D4D8DE;
+  border-bottom: 1px dashed #D4D8DE;
+  margin-left: -15px;
+  padding-left: 30px;
+}
+
+article > aside .menu .dd-item.parent div,
+article > aside .menu .dd-item.parent > div * {
+  color: #6E7477;
+}
+article > aside .menu .dd-item.active > div {
+  background: transparent;
+}
+article > aside .menu .dd-item.active > div * {
+  color: #35393B;
+}
+article > aside .menu .dd-item.parent.active > div * {
+  color: #222;
+}
+article > aside .menu .dd-item.parent > div > *,
+article > aside .menu .dd-item.active > div > * {
+  font-weight: 500;
+}
+
+article > aside .menu .dd-item.active > div * {
+  border-bottom: none;
+}
