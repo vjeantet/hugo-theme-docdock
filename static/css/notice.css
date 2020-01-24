@@ -2,7 +2,7 @@ div.notices {
   border-radius: 10px;
   border: 1px solid transparent;
   font-weight: 400;
-  line-height: 1.15rem;
+  line-height: 1.25rem;
 }
 div.notices p:first-child:before {
   color: inherit !important;
@@ -16,24 +16,59 @@ div.notices.note p:first-child:after {
 
 div.notices.note {
   background: #EAF8FF;
-  color: #2196C9;
+  color: #2196C9 !important;
   border-top: 1px solid #2196C9;
   border-color: #2196C9;
+}
+div.notices.note h1, 
+div.notices.note h2, 
+div.notices.note h3, 
+div.notices.note h4, 
+div.notices.note h5, 
+div.notices.note strong
+{
+  color: #2196C9 !important;
+}
+div.notices.note ul > li:before {
+  background: #2196C9 !important;
 }
 
 div.notices.info {
   background: #FFF6E5;
-  color: #C68A19;
+  color: #C68A19 !important;
   border-top: 1px solid #FFB831;
   border-color: #FFB831;
+}
+div.notices.info h1, 
+div.notices.info h2, 
+div.notices.info h3, 
+div.notices.info h4, 
+div.notices.info h5, 
+div.notices.info strong
+{
+  color: #C68A19 !important;
+}
+div.notices.info ul > li:before {
+  background: #C68A19 !important;
 }
 
 div.notices.warning {
   background: #FCCCB3;
-  color: #8B2E00;
+  color: #8B2E00 !important;
   border-top: 1px solid #D75B1D;
   border-color: #D75B1D;
 }
-
+div.notices.warning h1, 
+div.notices.warning h2, 
+div.notices.warning h3, 
+div.notices.warning h4, 
+div.notices.warning h5, 
+div.notices.warning strong
+{
+  color: #8B2E00 !important;
+}
+div.notices.warning ul > li:before {
+  background: #8B2E00 !important;
+}
 
 

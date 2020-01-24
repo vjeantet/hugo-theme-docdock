@@ -3,3 +3,26 @@ header .logo img {
   height: 40px;
 }
 
+
+header nav.shortcuts {
+  align-items: center;
+}
+
+header .searchbox {
+  padding-top: .8rem;
+}
+header label {
+  margin-bottom: 0;
+}
+header select {
+  margin-bottom: 0;
+  margin-left: .25rem;
+  outline: none;
+  border: 0;
+  background: #0f7fb1;
+  color: white;
+  outline: none;
+  min-width: 100px;
+  height: 32px;
+  border-radius: 10px;
+}

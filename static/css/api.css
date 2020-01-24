@@ -39,6 +39,9 @@ body[data-url*="proto.sk/"] > article section.page > ul:first-of-type > li {
   line-height: 22px;
   margin-right: 10px;
 }
+body[data-url*="proto.sk/"] > article section.page > ul:first-of-type > li:before {
+  display: none;
+}
 
 body[data-url*="proto.sk/"] > article section.page > ul:first-of-type > li a {
   font-size: 12px;

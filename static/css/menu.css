@@ -1,5 +1,4 @@
 article > aside {
-  padding-left: 1rem;
   padding-right: .5rem;
   width: 21rem; 
 }
@@ -31,11 +30,11 @@ article > aside .menu .dd-item ul li.dd-item > div  {
 
 article > aside .menu .dd-item > div {
   margin-left: -1px;
+  padding-left: .75rem;
 }
 article > aside .menu .dd-item > div, 
 article > aside .menu .dd-item.haschildren > div {
   margin-left: -15px;
-  padding-left: 0;
 }
 
 article > aside .menu .dd-item div a {
@@ -68,8 +67,7 @@ article > aside .menu .dd-item ul li.dd-item.active > div {
 article > aside .menu .dd-item.parent > ul {
   border-left: 1px dashed #D4D8DE;
   border-bottom: 1px dashed #D4D8DE;
-  margin-left: -15px;
-  padding-left: 30px;
+  padding-left: 15px;
 }
 
 article > aside .menu .dd-item.parent div,
