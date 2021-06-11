@@ -24,7 +24,7 @@
             </li>
         {{- end}}
 		
-		{{- partial "menu.html" . }}
+		{{- partialCached "menu.html" . }}
 		
 		{{- with .Site.Menus.shortcuts}}
         <section id="shortcuts">
