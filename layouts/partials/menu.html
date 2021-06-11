@@ -14,14 +14,11 @@
 <!-- templates -->
 {{- define "section-tree-nav" }}
 {{- $showvisitedlinks := .showvisitedlinks }}
-{{- $currentNode := .currentnode }}
  {{- with .sect}}
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
     <li data-nav-id="{{.Permalink}}" class="dd-item
-        {{- if .IsAncestor $currentNode}} parent{{end}}
-        {{- if eq .Permalink $currentNode.Permalink}} active{{end}}
         {{- if .Params.alwaysopen}} alwaysopen{{end -}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
@@ -29,7 +26,7 @@
       <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
         
         {{- if ne $numberOfPages 0 }}
-          {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
+          {{- if .Params.alwaysopen }}
             <i class="fa fa-angle-down fa-lg category-icon"></i>
           {{- else -}}
             <i class="fa fa-angle-right fa-lg category-icon"></i>
@@ -50,14 +47,14 @@
           {{- range $pages.ByTitle }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+            {{- template "section-tree-nav" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
             {{- end}}
           {{- end}}
         {{- else}}
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+            {{- template "section-tree-nav" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
             {{- end}}
           {{- end}}
         {{- end}}
@@ -66,9 +63,7 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item
-     {{- if eq .Permalink $currentNode.Permalink}} active{{end -}}
-      ">
+      <li data-nav-id="{{.Permalink}}" class="dd-item">
         <div>
           <a href="{{ .RelPermalink}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
@@ -80,3 +75,24 @@
   {{- end}}
  {{- end}}
 {{- end}}
+
+<script type="text/javascript">
+    var matches = document.querySelectorAll(`li[data-nav-id$="${window.location.pathname}"]`);
+    if (matches.length > 0) {
+        var menu = matches[0];
+        menu.classList.add("active");
+
+        var maxDepth = 10; // Avoid infinite loop !
+        var nextAncestor = menu.closest("li[data-nav-id]");
+        while (maxDepth-- >= 0 && nextAncestor !== null) {
+            nextAncestor.classList.add("parent");
+            var icon = nextAncestor.querySelector('i.category-icon');
+            if (icon !== null) {
+                icon.classList.remove('fa-angle-right');
+                icon.classList.add('fa-angle-down');
+            }
+
+            nextAncestor = nextAncestor.parentNode.closest("li[data-nav-id]");
+        }
+    }
+</script>
