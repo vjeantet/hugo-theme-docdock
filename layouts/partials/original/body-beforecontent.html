@@ -14,16 +14,6 @@
 		    <input data-search-input id="search-by" type="text" placeholder="{{T "Search-placeholder"}}">
 		    <span data-search-clear=""><i class="fa fa-close"></i></span>
 		</div>
-		<script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
-		<script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
-		<script type="text/javascript">
-        {{ if .Site.IsMultiLingual }}
-            var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
-        {{ else }}
-            var baseurl = "{{.Site.BaseURL}}";
-        {{ end }}
-		</script>
-		<script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
     {{- end}}
   </div>
 
