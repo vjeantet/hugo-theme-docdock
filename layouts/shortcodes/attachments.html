@@ -1,4 +1,3 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
 <section class="attachments">
 	<label>
 		<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
@@ -13,20 +12,20 @@
 		{{ $fileDir := replace $.Page.File.Dir "\\" "/" }}
 		{{if ($.Get "pattern")}}
 			{{if (findRE ($.Get "pattern") .Name)}}
-				<li>
-					<a href="{{ printf "%s/%s%s/%s" $.Site.BaseURL $fileDir ($.Scratch.Get "filesName") .Name }}" >
-						{{.Name}}
-					</a>
-					({{div .Size 1024 }} kB)
-				</li>
+<li>
+    <a href="{{ printf "%s/%s%s/%s" $.Site.BaseURL $fileDir ($.Scratch.Get "filesName") .Name }}" >
+        {{.Name}}
+    </a>
+    ({{div .Size 1024 }} kB)
+</li>
 			{{end}}
 		{{else}}
-			<li>
-				<a href="{{ printf "%s/%s%s/%s" $.Site.BaseURL $fileDir ($.Scratch.Get "filesName") .Name }}" >
-					{{.Name}}
-				</a>
-				({{div .Size 1024 }} kB)
-			</li>
+<li>
+    <a href="{{ printf "%s/%s%s/%s" $.Site.BaseURL $fileDir ($.Scratch.Get "filesName") .Name }}" >
+        {{.Name}}
+    </a>
+    ({{div .Size 1024 }} kB)
+</li>
 		{{end}}
 	{{end}}
 </section>

@@ -25,7 +25,9 @@ enableMissingTranslationPlaceholders = false
 # languageName = "Français"
 
 
-
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
 editURL = "https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/"

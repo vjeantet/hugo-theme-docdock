@@ -3,7 +3,7 @@ title = "icon"
 description = "Display an icon."
 +++
 
-Display an icon like `{{% icon cloud %}}`
+Display an icon like {{% icon cloud %}}
 
 It uses :
 
