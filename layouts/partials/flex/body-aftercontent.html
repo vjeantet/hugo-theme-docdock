@@ -54,3 +54,8 @@
 </footer>
 
 {{ partial "flex/scripts.html" . }}
+
+{{ $layoutsPartialsMenu := resources.Get "js/layouts/partials/menu.js" }}
+
+{{ $concatjs := slice $layoutsPartialsMenu | resources.Concat "js/scripts.js" | resources.Minify }}
+<script src="{{ $concatjs.Permalink }}"></script>
