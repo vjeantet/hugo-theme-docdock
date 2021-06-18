@@ -2,12 +2,12 @@
     {{- if not (hasPrefix (.Get "name") "fa-") -}}
 <span class="glyphicon glyphicon-{{.Get "name"}}" {{with .Get "size"}}style="font-size:{{.}}"{{end}} aria-hidden="true"></span>
     {{- else -}}
-<span class="fa {{.Get "name"}}"  {{with .Get "size"}}style="font-size:{{.}}"{{end}} aria-hidden="true"></span>
+<span class="{{ if .Get "fa" }}{{ .Get "fa" }}{{ else }}fas{{ end }} {{.Get "name"}}"  {{with .Get "size"}}style="font-size:{{.}}"{{end}} aria-hidden="true"></span>
     {{- end -}}
 {{- else -}}
     {{- if not (hasPrefix (.Get 0) "fa-") -}}
 <span class="glyphicon glyphicon-{{.Get 0}}" aria-hidden="true"></span>
     {{- else -}}
-<span class="fa {{.Get 0}}" aria-hidden="true"></span>
+<span class="{{ if .Get 1 }}{{.Get 1}}{{ else }}fas{{end}} {{.Get 0}}" aria-hidden="true"></span>
     {{- end -}}
 {{- end -}}
