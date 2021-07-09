@@ -12,6 +12,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
+disqusShortname = ""
 
 # [Languages]
 # [Languages.en]
