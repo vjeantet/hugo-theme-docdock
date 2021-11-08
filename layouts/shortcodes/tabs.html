@@ -12,7 +12,7 @@
     {{ range $i, $e := $tabs }}
     {{ $id := printf "%s-%d" $tab_set_id $i }}
     <div id="{{ $id }}">
-        {{ with .content }}
+        {{ with .content | safeHTML | markdownify }}
         {{ . }}
         {{ else }}
         {{ if eq $.Page.BundleType "leaf" }}
@@ -30,7 +30,7 @@
         {{ $path := path.Join $.Page.File.Dir .include }}
         {{ $page := site.GetPage "page" $path }}
         {{ with $page }}
-        {{ .Content }}
+        {{ .Content | safeHTML | markdownify }}
         {{ else }}
         {{ errorf "[%s] tabs include not found for path %q" site.Language.Lang $path}}
         {{ end }}
