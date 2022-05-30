@@ -24,8 +24,8 @@ Create a custom header partial `layouts/partials/custom-head.html`
 
 write your own content like (an example from @nzbart):
 ```html
-<link rel="stylesheet" href="/css/custom.css">
-<script src="/js/custom.js"></script>
+<link href="{{"css/custom.css" | relURL}}" rel="stylesheet">
+<script src="{{"js/custom.js" | relURL}}"></script>
 ```
 
 Then overrode the style your want to change in `static/css/custom.css` (in this case, to avoid altering the casing of titles):
