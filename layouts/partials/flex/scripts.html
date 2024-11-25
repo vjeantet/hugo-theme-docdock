@@ -1,6 +1,6 @@
 <script src="{{"js/jquery-2.x.min.js" | relURL}}"></script>
 <script type="text/javascript">
-    {{if .Site.IsMultiLingual}}
+    {{if hugo.IsMultilingual}}
         var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
     {{else}}
         var baseurl = "{{.Site.BaseURL}}";
